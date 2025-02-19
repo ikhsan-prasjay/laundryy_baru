@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">laundry</string>
+    <string name="card_data_pelanggan">Customer ID</string>
+    <string name="NAMA_Pelanggan">Name</string>
+    <string name="Mamat">Address</string>
+    <string name="nomer">"Hp number "</string>
+    <string name="selamat">Good morning, Ikhsan</string>
+    <string name="estimasi">Today\'s Estimates</string>
+    <string name="siap">Ready to serve customers wholeheartedly</string>
+    <string name="validasi_nama_pelanggan">validate_customer_name</string>
+    <string name="validasi_alamat_pelanggan">customer_address_validation</string>
+    <string name="validasi_nohp_pelanggan">validate_customer_phone_number</string>
+    <string name="berhasil_tambah_pelanggan">successfully_added_customer</string>
+    <string name="pelanggan_tambah_gagal">add_customer_failed</string>
+</resources>

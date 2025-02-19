@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">laundry</string>
+    <string name="card_data_pelanggan">ID Pelanggan</string>
+    <string name="NAMA_Pelanggan">Nama Pelanggan</string>
+    <string name="Mamat">Alamat</string>
+    <string name="nomer">no HP Aktif</string>
+    <string name="selamat">Selamat Pagi,Ikhsan</string>
+    <string name="estimasi">Estimasi Hari ini</string>
+    <string name="siap">Siap melayani Pelanggan dengan sepenuh hati</string>
+    <string name="validasi_nama_pelanggan">validasi_nama_pelanggan</string>
+    <string name="validasi_alamat_pelanggan">validasi_alamat_pelanggan</string>
+    <string name="validasi_nohp_pelanggan">validasi_nohp_pelanggan</string>
+    <string name="berhasil_tambah_pelanggan">berhasil_tambah_pelanggan</string>
+    <string name="pelanggan_tambah_gagal">pelanggan_tambah_gagal</string>
+</resources>
