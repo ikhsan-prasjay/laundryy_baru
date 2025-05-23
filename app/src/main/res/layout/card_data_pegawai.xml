@@ -2,65 +2,117 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:id="@+id/CvPegawai"
     android:layout_height="wrap_content"
     card_view:cardCornerRadius="8dp"
     card_view:cardElevation="4dp"
     android:layout_margin="20dp">
 
+
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tvCARD_pegawai"
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#649535"
+            android:background="#699DC7"
             android:gravity="center_vertical"
             android:paddingStart="15dp"
             android:paddingEnd="15dp"
-            android:text="Pegawai"
-            android:textColor="#212121"
-            android:textSize="16sp" />
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID Pegawai        :"
+                android:textSize="15sp"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/tvCARD_PEGAWAI_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="15sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
-
-            <TextView
-                android:id="@+id/tvCARD_Pegawai2"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nama Pegawai"
-                android:textSize="14sp"
-                android:layout_marginBottom="4dp"/>
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
 
-            <TextView
-                android:id="@+id/tvCARD_Pegawai_alamat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Alamat"
-                android:textSize="14sp"
-                android:layout_marginBottom="2dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Pegawai :"
+                    android:textSize="15sp" />
 
-            <TextView
-                android:id="@+id/tvCARD_Pegawai_nohp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="No HP"
-                android:textSize="14sp"
-                android:layout_marginBottom="2dp"/>
+                <TextView
+                    android:id="@+id/tvCARD_PEGAWAI_nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginStart="10dp" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/tvCARD_Pegawai_terdaftar"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Terdaftar"
-                android:textSize="14sp"
-                android:layout_marginBottom="8dp"/>
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat               :"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvCARD_PEGAWAI_alamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginStart="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nomor HP         :"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvCARD_PEGAWAI_nohp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginStart="10dp" />
+            </LinearLayout>
 
             <!-- Tombol Aksi -->
             <LinearLayout
@@ -85,7 +137,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Lihat"
-                    android:backgroundTint="#22D10B"
+                    android:backgroundTint="#D91C09"
                     android:textColor="@android:color/white"/>
 
             </LinearLayout>

@@ -11,6 +11,11 @@
     <string name="validasi_nama_pelanggan">validate_customer_name</string>
     <string name="validasi_alamat_pelanggan">customer_address_validation</string>
     <string name="validasi_nohp_pelanggan">validate_customer_phone_number</string>
-    <string name="berhasil_tambah_pelanggan">successfully_added_customer</string>
+    <string name="berhasil_tambah_pelanggan">successfully added customer</string>
     <string name="pelanggan_tambah_gagal">add_customer_failed</string>
+    <string name="validasi_nama_pegawai">employee_name_validation</string>
+    <string name="validasi_alamat_pegawai">employee_address_validation</string>
+    <string name="validasi_nohp_pegawai">employee_phone_number_validation</string>
+    <string name="berhasil_tambah_pegawai">successfully add employee</string>
+    <string name="pegawai_tambah_gagal">customer addition failed</string>
 </resources>
