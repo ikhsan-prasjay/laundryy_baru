@@ -218,6 +218,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:cardCornerRadius="12dp"
+                    android:id="@+id/cvLayanan"
                     app:cardElevation="4dp"
                     android:layout_margin="8dp">
 

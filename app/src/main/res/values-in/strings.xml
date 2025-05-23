@@ -18,4 +18,10 @@
     <string name="validasi_nohp_pegawai">validasi_nohp_pegawai</string>
     <string name="berhasil_tambah_pegawai">berhasil tambah pegawai</string>
     <string name="pegawai_tambah_gagal">pelanggan tambah gagal</string>
+    <string name="tambah_layanan">tambah layanan</string>
+    <string name="validasi_nama_layanan">validasi_nama_layana</string>
+    <string name="validasi_harga_layanan">validasi_harga_layanan</string>
+    <string name="validasi_cabang_layanan">validasi_cabang_layanan</string>
+    <string name="tambah_layanan_sukses">tambah_layanan_sukses</string>
+    <string name="tambah_layanan_gagal">tambah_layanan_gagal</string>
 </resources>

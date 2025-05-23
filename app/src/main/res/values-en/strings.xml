@@ -18,4 +18,10 @@
     <string name="validasi_nohp_pegawai">employee_phone_number_validation</string>
     <string name="berhasil_tambah_pegawai">successfully add employee</string>
     <string name="pegawai_tambah_gagal">customer addition failed</string>
+    <string name="tambah_layanan">add service</string>
+    <string name="validasi_nama_layanan">service_name_validation</string>
+    <string name="validasi_harga_layanan">service price validation</string>
+    <string name="validasi_cabang_layanan">branch_service_validation</string>
+    <string name="tambah_layanan_sukses">Add service success</string>
+    <string name="tambah_layanan_gagal">service addition failed</string>
 </resources>

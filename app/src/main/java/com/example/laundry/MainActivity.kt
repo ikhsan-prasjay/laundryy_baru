@@ -7,6 +7,7 @@ import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.laundry.Pelanggan.DataPelangganActivity
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     // properti lateinit untuk view
     private lateinit var ivpelanggan: ImageView
     private lateinit var pegawai: CardView
+    lateinit var cvLayanan: CardView
 
     @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         // inisialisasi view
         ivpelanggan = findViewById(R.id.ivpelanggan)
         pegawai = findViewById(R.id.pegawai)
+        cvLayanan = findViewById(R.id.cvLayanan)
 
         // event klik
         ivpelanggan.setOnClickListener {
@@ -35,6 +38,10 @@ class MainActivity : AppCompatActivity() {
 
         pegawai.setOnClickListener {
             val intent = Intent(this, Data_Pegawai_Activity::class.java)
+            startActivity(intent)
+        }
+        cvLayanan.setOnClickListener {
+            val intent = Intent(this, DataLayananActivity2::class.java)
             startActivity(intent)
         }
 
