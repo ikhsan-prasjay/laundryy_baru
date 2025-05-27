@@ -23,4 +23,5 @@
     <string name="validasi_cabang_layanan">validasi_cabang_layanan</string>
     <string name="tambah_layanan_sukses">tambah_layanan_sukses</string>
     <string name="tambah_layanan_gagal">tambah_layanan_gagal</string>
+    <string name="validasi_cabang_pelanggan">validasi_cabang_pelanggan</string>
 </resources>

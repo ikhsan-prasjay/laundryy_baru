@@ -5,5 +5,6 @@ class ModelPelanggan (
     val et_nama: String? = null,
     val et_alamat: String? = null,
     val et_no_hp:String? = null,
-    val et_terdaftar:String? = null,
+    val etCabang: String? = null,
+    val et_terdaftar:String? = null
 )

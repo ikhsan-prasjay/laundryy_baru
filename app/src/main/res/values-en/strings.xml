@@ -24,4 +24,5 @@
     <string name="validasi_cabang_layanan">branch_service_validation</string>
     <string name="tambah_layanan_sukses">Add service success</string>
     <string name="tambah_layanan_gagal">service addition failed</string>
+    <string name="validasi_cabang_pelanggan">customer_branch_validation</string>
 </resources>

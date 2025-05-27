@@ -41,14 +41,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:paddingStart="15dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="16dp"
-            android:textColor="@color/black"
             android:background="@drawable/rounded"
             android:hint="  Nama Lengkap"
             android:minHeight="48dp"
+            android:paddingStart="15dp"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_nama" />
 
@@ -107,6 +108,31 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_no_hp" />
+
+        <TextView
+            android:id="@+id/cabang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="21dp"
+            android:text="Cabang"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:layout_constraintTop_toBottomOf="@id/et_no_hp"
+            tools:ignore="TextSizeCheck"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <EditText
+            android:id="@+id/etcabang"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded"
+            android:layout_marginTop="10dp"
+            android:hint="   Cabang"
+            app:layout_constraintTop_toBottomOf="@id/cabang"
+            android:layout_marginEnd="20dp"
+            android:paddingLeft="5dp"
+            android:layout_marginStart="20dp"/>
 
         <Button
             android:id="@+id/btn_simpan"
