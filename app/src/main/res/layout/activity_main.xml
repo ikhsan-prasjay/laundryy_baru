@@ -243,6 +243,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cvtambahan"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -251,13 +252,15 @@
                     android:layout_margin="8dp">
 
                     <LinearLayout
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="16dp">
+
                         <ImageView
-                            android:layout_width="60dp"
+                            android:layout_width="57dp"
                             android:layout_height="60dp"
                             android:src="@drawable/tambah" />
                         <TextView

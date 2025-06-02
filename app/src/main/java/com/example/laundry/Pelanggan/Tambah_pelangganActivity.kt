@@ -1,6 +1,6 @@
 package com.example.laundry.Pelanggan
 
-
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -10,12 +10,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.laundry.Data_model.ModelPelanggan
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.database.FirebaseDatabase
 import com.example.laundry.R
-import com.example.laundry.Data_model.ModelPelanggan
-
-
 class Tambah_pelangganActivity : AppCompatActivity() {
     val database = FirebaseDatabase.getInstance()
     val myRef = database.getReference("pelanggan")
@@ -55,7 +53,7 @@ class Tambah_pelangganActivity : AppCompatActivity() {
         btSimpan.setOnClickListener{
             cekValidasi()
         }
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.tambah_pelanggan)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
@@ -64,12 +62,12 @@ class Tambah_pelangganActivity : AppCompatActivity() {
 
 
     fun init(){
-        tvJudul = findViewById(R.id.tv_title)
-        etNama = findViewById(R.id.et_nama)
-        etAlamat = findViewById(R.id.et_alamat)
-        etNoHP = findViewById(R.id.et_no_hp)
+        tvJudul = findViewById(R.id.tvtambahkan_pelanggan)
+        etNama = findViewById(R.id.etnama_lengkap)
+        etAlamat = findViewById(R.id.etalamat)
+        etNoHP = findViewById(R.id.etNoHp)
         etCabang = findViewById(R.id.etcabang)
-        btSimpan = findViewById(R.id.btn_simpan)
+        btSimpan = findViewById(R.id.btsimpanpelanggan)
     }
 
     fun cekValidasi() {
@@ -142,7 +140,7 @@ class Tambah_pelangganActivity : AppCompatActivity() {
             "namaPelanggan" to etNama.text.toString(),
             "alamatPelanggan" to etAlamat.text.toString(),
             "noHPPelanggan" to etNoHP.text.toString(),
-            "idCabang" to etCabang.text.toString()
+            "cabangPelanggan" to etCabang.text.toString()
         )
 
         myRef.child(pelangganId ?: "").updateChildren(dataUpdate)

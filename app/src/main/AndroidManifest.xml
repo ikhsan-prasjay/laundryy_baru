@@ -15,6 +15,33 @@
         android:theme="@style/Theme.Laundry"
         tools:targetApi="31">
         <activity
+            android:name=".Dialog_mod_PegawaiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Data_Tambahan_Activity2"
+            android:exported="false" />
+        <activity
+            android:name=".Tambah_TambahanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Tambah_Cabang_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Data_Cabang_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Dialog_mod_pelanggan"
+            android:exported="false" />
+        <activity
             android:name=".Tambah_layanan_Activity"
             android:exported="false" />
         <activity
@@ -22,15 +49,6 @@
             android:exported="false" />
         <activity
             android:name=".DataLayananActivity2"
-            android:exported="false" />
-        <activity
-            android:name=".Card_Data_Layanan"
-            android:exported="false" />
-        <activity
-            android:name=".Data_Layanan_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".LayananActivity"
             android:exported="false" />
         <activity
             android:name=".Data_Pegawai_Activity"
@@ -50,16 +68,9 @@
         <activity
             android:name=".Pelanggan.Tambah_pelangganActivity"
             android:exported="false" />
-        <activity android:name=".Pelanggan.DataPelangganActivity" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".Pelanggan.DataPelangganActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

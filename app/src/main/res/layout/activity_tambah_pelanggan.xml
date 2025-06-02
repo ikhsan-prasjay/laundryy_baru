@@ -2,154 +2,139 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/tambah_pelanggan"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_height="match_parent"
+    tools:context=".Pelanggan.Tambah_pelangganActivity">
+
+    <TextView
+        android:id="@+id/tvtambahkan_pelanggan"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".TambahPelangganActivity"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/tambahkanpelanggan"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp"
+        tools:ignore="MissingConstraints" />
 
-        <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="TAMBAH PELANGGAN"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/namalengkap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/namalengkap"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvtambahkan_pelanggan"
+        tools:ignore="TextSizeCheck" />
 
-        <TextView
-            android:id="@+id/tv_nama"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:paddingStart="5dp"
-            android:layout_marginTop="16dp"
-            android:text="Nama Lengkap"
-            android:textSize="17dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+    <EditText
+        android:id="@+id/etnama_lengkap"
+        android:background="@drawable/rounded"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Nama Lengkap"
+        app:layout_constraintTop_toBottomOf="@id/namalengkap"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:paddingLeft="5dp"/>
 
-        <EditText
-            android:id="@+id/et_nama"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/rounded"
-            android:hint="  Nama Lengkap"
-            android:minHeight="48dp"
-            android:paddingStart="15dp"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_nama" />
+    <TextView
+        android:id="@+id/alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="21dp"
+        android:text="Alamat"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintTop_toBottomOf="@id/etnama_lengkap"
+        tools:ignore="TextSizeCheck"
+        tools:layout_editor_absoluteX="20dp" />
 
-        <TextView
-            android:id="@+id/tv_alamat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:textSize="17dp"
-            android:layout_marginTop="16dp"
-            android:text="Alamat"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_nama" />
+    <EditText
+        android:id="@+id/etalamat"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="   Alamat"
+        android:paddingLeft="5dp"
+        android:background="@drawable/rounded"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/alamat"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"/>
 
-        <EditText
-            android:id="@+id/et_alamat"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:paddingStart="15dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:textColor="@color/black"
-            android:background="@drawable/rounded"
-            android:hint="  Alamat"
-            android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_alamat" />
+    <TextView
+        android:id="@+id/NoHp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="21dp"
+        android:text="No Hp aktif"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintTop_toBottomOf="@id/etalamat"
+        tools:ignore="TextSizeCheck"
+        tools:layout_editor_absoluteX="20dp" />
 
-        <TextView
-            android:id="@+id/tv_no_hp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:textSize="17dp"
-            android:layout_marginTop="16dp"
-            android:text="No HP Aktif"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_alamat" />
+    <EditText
+        android:id="@+id/etNoHp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded"
+        android:layout_marginTop="10dp"
+        android:inputType="phone"
+        android:hint="   No Hp aktif"
+        app:layout_constraintTop_toBottomOf="@id/NoHp"
+        android:layout_marginEnd="20dp"
+        android:paddingLeft="5dp"
+        android:layout_marginStart="20dp"/>
 
-        <EditText
-            android:id="@+id/et_no_hp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:paddingStart="15dp"
-            android:inputType="phone"
-            android:textColor="@color/black"
-            android:background="@drawable/rounded"
-            android:hint="  No HP Aktif"
-            android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_no_hp" />
+    <TextView
+        android:id="@+id/cabang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="21dp"
+        android:text="Cabang"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintTop_toBottomOf="@id/etNoHp"
+        tools:ignore="TextSizeCheck"
+        tools:layout_editor_absoluteX="20dp" />
 
-        <TextView
-            android:id="@+id/cabang"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="21dp"
-            android:text="Cabang"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            app:layout_constraintTop_toBottomOf="@id/et_no_hp"
-            tools:ignore="TextSizeCheck"
-            tools:layout_editor_absoluteX="20dp" />
+    <EditText
+        android:id="@+id/etcabang"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded"
+        android:layout_marginTop="10dp"
+        android:hint="   Cabang"
+        app:layout_constraintTop_toBottomOf="@id/cabang"
+        android:layout_marginEnd="20dp"
+        android:paddingLeft="5dp"
+        android:layout_marginStart="20dp"/>
 
-        <EditText
-            android:id="@+id/etcabang"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/rounded"
-            android:layout_marginTop="10dp"
-            android:hint="   Cabang"
-            app:layout_constraintTop_toBottomOf="@id/cabang"
-            android:layout_marginEnd="20dp"
-            android:paddingLeft="5dp"
-            android:layout_marginStart="20dp"/>
-
-        <Button
-            android:id="@+id/btn_simpan"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:text="Simpan"
-            android:textColor="@android:color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_no_hp"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btsimpanpelanggan"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="SIMPAN"
+        app:layout_constraintTop_toBottomOf="@+id/etcabang"
+        tools:layout_editor_absoluteX="90dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

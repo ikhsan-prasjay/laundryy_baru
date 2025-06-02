@@ -2,22 +2,22 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/tambah_pegawai"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Tambah_PegawaiActivity2"
+        tools:context=".Tambah_Cabang_Activity"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
         <TextView
-            android:id="@+id/tv_title_pegawai"
+            android:id="@+id/tv_title_CABANG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="TAMBAH PEGAWAI"
+            android:text="TAMBAH CABANG"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -25,36 +25,35 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_nama_pegawai"
+            android:id="@+id/tv_nama_CABANG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:paddingStart="5dp"
             android:layout_marginTop="16dp"
-            android:text="Nama Lengkap"
+            android:text="Nama Cabang"
             android:textSize="17dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_title_pegawai" />
+            app:layout_constraintTop_toBottomOf="@id/tv_title_CABANG" />
 
         <EditText
-            android:id="@+id/et_nama_pegawai"
+            android:id="@+id/et_nama_CABANG"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:paddingStart="15dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
+            android:textColor="@color/black"
             android:background="@drawable/rounded"
             android:hint="  Nama Lengkap"
             android:minHeight="48dp"
-            android:paddingStart="15dp"
-            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_nama_pegawai" />
+            app:layout_constraintTop_toBottomOf="@id/tv_nama_CABANG" />
 
         <TextView
-            android:id="@+id/tv_alamat_pegawai"
+            android:id="@+id/tv_alamat_CABANG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -62,10 +61,10 @@
             android:layout_marginTop="16dp"
             android:text="Alamat"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_nama_pegawai" />
+            app:layout_constraintTop_toBottomOf="@id/et_nama_CABANG" />
 
         <EditText
-            android:id="@+id/et_alamat_pegawai"
+            android:id="@+id/et_alamat_CABANG"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -79,10 +78,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_alamat_pegawai" />
+            app:layout_constraintTop_toBottomOf="@id/tv_alamat_CABANG" />
 
         <TextView
-            android:id="@+id/tv_no_hp_pegawai"
+            android:id="@+id/tv_no_hp_CABANG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -90,10 +89,10 @@
             android:layout_marginTop="16dp"
             android:text="No HP Aktif"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_alamat_pegawai" />
+            app:layout_constraintTop_toBottomOf="@id/et_alamat_CABANG" />
 
         <EditText
-            android:id="@+id/et_no_hp_pegawai"
+            android:id="@+id/et_no_hp_CABANG"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -107,38 +106,10 @@
             android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_no_hp_pegawai" />
-
-        <TextView
-            android:id="@+id/tvCabangPegawai"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:textSize="17dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/cabang"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_no_hp_pegawai" />
-
-        <EditText
-            android:id="@+id/et_Cabang_pegawai"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:paddingStart="15dp"
-            android:textColor="@color/black"
-            android:background="@drawable/rounded"
-            android:hint="@string/cabang"
-            android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvCabangPegawai" />
-
+            app:layout_constraintTop_toBottomOf="@id/tv_no_hp_CABANG" />
 
         <Button
-            android:id="@+id/btn_simpan_pegawai"
+            android:id="@+id/btn_simpan_CABANG"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -150,7 +121,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_no_hp_pegawai"/>
+            app:layout_constraintTop_toBottomOf="@id/et_no_hp_CABANG"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

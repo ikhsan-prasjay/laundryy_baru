@@ -1,18 +1,18 @@
 package com.example.laundry
-
+import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.laundry.Data_model.ModelPegawai
-import com.example.laundry.Data_model.ModelPelanggan
 import com.google.firebase.database.FirebaseDatabase
+import com.example.laundry.R
+import com.example.laundry.Data_model.ModelPegawai
 
 class Tambah_PegawaiActivity2 : AppCompatActivity() {
     val database = FirebaseDatabase.getInstance()
@@ -21,6 +21,7 @@ class Tambah_PegawaiActivity2 : AppCompatActivity() {
     lateinit var etNama: EditText
     lateinit var etAlamat: EditText
     lateinit var etNoHP: EditText
+    lateinit var etCabang: EditText
     lateinit var btSimpan: Button
 
     var pegawaiId: String? = ""
@@ -36,6 +37,7 @@ class Tambah_PegawaiActivity2 : AppCompatActivity() {
             val nama = dataIntent.getStringExtra("namaPegawai")
             val alamat = dataIntent.getStringExtra("alamatPegawai")
             val noHp = dataIntent.getStringExtra("noHpPegawai")
+            val cabang = dataIntent.getStringExtra("cabangPegawai")
 
 
             if (pegawaiId != null) {
@@ -44,6 +46,7 @@ class Tambah_PegawaiActivity2 : AppCompatActivity() {
                 etNama.setText(nama)
                 etAlamat.setText(alamat)
                 etNoHP.setText(noHp)
+                etCabang.setText(cabang)
             }
         }
         btSimpan.setOnClickListener{
@@ -61,6 +64,7 @@ class Tambah_PegawaiActivity2 : AppCompatActivity() {
         etNama = findViewById(R.id.et_nama_pegawai)
         etAlamat = findViewById(R.id.et_alamat_pegawai)
         etNoHP = findViewById(R.id.et_no_hp_pegawai)
+        etCabang = findViewById(R.id.et_Cabang_pegawai)
         btSimpan = findViewById(R.id.btn_simpan_pegawai)
     }
 
@@ -68,6 +72,7 @@ class Tambah_PegawaiActivity2 : AppCompatActivity() {
         val nama = etNama.text.toString()
         val alamat = etAlamat.text.toString()
         val noHp = etNoHP.text.toString()
+        val cabang = etCabang.text.toString()
 
         if (nama.isEmpty()) {
             etNama.error = this.getString(R.string.validasi_nama_pegawai)
@@ -87,6 +92,12 @@ class Tambah_PegawaiActivity2 : AppCompatActivity() {
             etNoHP.requestFocus()
             return
         }
+        if (cabang.isEmpty()) {
+            etCabang.error = this.getString(R.string.validasi_cabang_pelanggan)
+            Toast.makeText(this, this.getString(R.string.validasi_cabang_pelanggan),Toast.LENGTH_SHORT).show()
+            etCabang.requestFocus()
+            return
+        }
         if (pegawaiId == null) {
             simpan()
         } else {
@@ -102,12 +113,13 @@ class Tambah_PegawaiActivity2 : AppCompatActivity() {
             etNama.text.toString(),
             etAlamat.text.toString(),
             etNoHP.text.toString(),
+            etCabang.text.toString(),
         )
         pegawaiBaru.setValue(data)
             .addOnSuccessListener {
                 Toast.makeText(
                     this,
-                    this.getString(R.string.berhasil_tambah_pelanggan),
+                    this.getString(R.string.berhasil_tambah_pegawai),
                     Toast.LENGTH_SHORT
                 )
                 finish()
@@ -126,6 +138,7 @@ class Tambah_PegawaiActivity2 : AppCompatActivity() {
             "namaPelanggan" to etNama.text.toString(),
             "alamatPelanggan" to etAlamat.text.toString(),
             "noHPPelanggan" to etNoHP.text.toString(),
+            "cabangPegawai" to etCabang.text.toString()
         )
 
         myRef.child(pegawaiId ?: "").updateChildren(dataUpdate)
