@@ -3,85 +3,63 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    card_view:cardCornerRadius="12dp"
     card_view:cardElevation="4dp"
-    card_view:cardCornerRadius="8dp">
+    android:id="@+id/cvCARD_PILIHTAMBAHAN"
+    android:layout_margin="5dp"
+    android:layout_marginBottom="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp"
-        android:gravity="center_vertical">
+        android:orientation="vertical">
 
-        <!-- Number Circle -->
+        <!-- Header -->
         <TextView
-            android:id="@+id/tv_number"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_marginEnd="16dp"
-            android:gravity="center"
+            android:id="@+id/tvCARD_PILIHTAMBAHAN_ID"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="#9900BF"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
             android:text="1"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            android:background="@drawable/cirle" />
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
 
-        <!-- Service Details -->
+        <!-- Content -->
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tv_service_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Service Name"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                android:maxLines="2"
-                android:ellipsize="end" />
-
-            <TextView
-                android:id="@+id/tv_service_description"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="Layanan tambahan"
-                android:textSize="12sp"
-                android:textColor="#666666"
-                android:visibility="gone" />
-        </LinearLayout>
-
-        <!-- Price & Delete -->
-        <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="end">
+            android:padding="12dp">
 
             <TextView
-                android:id="@+id/tv_service_price"
+                android:id="@+id/tvCARD_PILIHTAMBAHAN_nama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rp25.000"
-                android:textSize="16sp"
+                android:text="Pewangi Aroma Terapi"
                 android:textStyle="bold"
-                android:textColor="#4CAF50" />
+                android:textSize="16sp" />
 
-            <ImageButton
-                android:id="@+id/btn_delete"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginTop="4dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@android:drawable/ic_menu_delete"
-                android:contentDescription="Delete"
-                android:visibility="gone"
-                android:tint="#F44336" />
+            <TextView
+                android:id="@+id/tvCARD_PILIHTAMBAHAN_harga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Harga : Rp. 6.000" />
         </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="-52dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Hapus"
+            android:src="@android:drawable/ic_menu_delete"
+            android:visibility="gone" /> <!-- default disembunyikan -->
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>

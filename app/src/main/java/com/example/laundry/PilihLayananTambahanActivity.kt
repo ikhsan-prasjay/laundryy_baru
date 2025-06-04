@@ -24,7 +24,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import java.io.Serializable // Penting untuk mengirim ArrayList
 
-class Pilih_Layanan_Tambahan_Activity : AppCompatActivity() {
+class PilihLayananTambahanActivity : AppCompatActivity() {
 
     private val TAG = "PilihLayananTambahan"
     private val database = FirebaseDatabase.getInstance()

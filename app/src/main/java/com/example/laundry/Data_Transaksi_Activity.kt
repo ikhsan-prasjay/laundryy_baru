@@ -16,7 +16,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.laundry.Data_model.ModelTambahan
 import com.example.laundry.adapter.AdapterPilihTambahan
 import com.google.firebase.FirebaseApp
+import com.google.android.material.floatingactionbutton.FloatingActionButton // Import FloatingActionButton
 
+import java.io.Serializable
 
 class Data_Transaksi_Activity : AppCompatActivity() {
     private lateinit var tvNamaPelanggan: TextView
@@ -27,9 +29,10 @@ class Data_Transaksi_Activity : AppCompatActivity() {
     private lateinit var btnPilihPelanggan: Button
     private lateinit var btnPilihLayanan: Button
     private lateinit var btnProses: Button
-    private lateinit var btnTambahan: Button
+    private lateinit var fabTambahan: FloatingActionButton // Changed to FloatingActionButton
 
     private val dataList = mutableListOf<ModelTambahan>()
+    private lateinit var additionalServiceAdapter: AdapterPilihTambahan // Declare adapter here
 
     private val pilihPelanggan = 1
     private val pilihLayanan = 2
@@ -60,6 +63,12 @@ class Data_Transaksi_Activity : AppCompatActivity() {
 
         initViews()
 
+        // Initialize the adapter for rvLayananTambahan
+        additionalServiceAdapter = AdapterPilihTambahan(ArrayList(dataList)) { item, isSelected ->
+            // This lambda is for when items are selected/deselected in Pilih_Layanan_Tambahan_Activity
+            // We don't need to do anything here because we handle the return list from that activity
+        }
+        rvLayananTambahan.adapter = additionalServiceAdapter
         rvLayananTambahan.layoutManager = LinearLayoutManager(this).apply {
             reverseLayout = true
         }
@@ -75,8 +84,10 @@ class Data_Transaksi_Activity : AppCompatActivity() {
             startActivityForResult(intent, pilihLayanan)
         }
 
-        btnTambahan.setOnClickListener {
-            val intent = Intent(this, Pilih_Layanan_Tambahan_Activity::class.java)
+        fabTambahan.setOnClickListener { // Changed to fabTambahan
+            val intent = Intent(this, Pilih_Tambahan_Activity::class.java)
+            // Pass the currently selected additional services to the selection activity
+            intent.putExtra("previously_selected_tambahan", ArrayList(dataList) as Serializable)
             startActivityForResult(intent, pilihLayananTambahan)
         }
 
@@ -88,7 +99,7 @@ class Data_Transaksi_Activity : AppCompatActivity() {
                 intent.putExtra("nomor_hp", noHP)
                 intent.putExtra("nama_layanan", namaLayanan)
                 intent.putExtra("harga_layanan", hargaLayanan)
-                intent.putExtra("layanan_tambahan", ArrayList(dataList)) // pastikan model_tambahan implement Serializable
+                intent.putExtra("layanan_tambahan", ArrayList(dataList) as Serializable) // Ensure it's Serializable
                 startActivity(intent)
             }
         }
@@ -126,8 +137,8 @@ class Data_Transaksi_Activity : AppCompatActivity() {
         rvLayananTambahan = findViewById(R.id.rvLayananTambahan)
         btnPilihPelanggan = findViewById(R.id.btnPilihPelanggan)
         btnPilihLayanan = findViewById(R.id.btnPilihLayanan)
-        btnTambahan = findViewById(R.id.btnTambahan)
-        btnProses = findViewById(R.id.btnProses) // Added missing findViewById for btnProses
+        fabTambahan = findViewById(R.id.fabTambahan) // Corrected ID for FloatingActionButton
+        btnProses = findViewById(R.id.btnProses)
     }
 
     @Deprecated("This method has been deprecated in favor of using the Activity Result API")
@@ -155,30 +166,14 @@ class Data_Transaksi_Activity : AppCompatActivity() {
                 }
 
                 pilihLayananTambahan -> {
-                    val idTambahan = data.getStringExtra("idTambahan").orEmpty()
-                    val namaTambahan = data.getStringExtra("namaTambahan").orEmpty()
-                    val hargaTambahan = data.getStringExtra("hargaTambahan").orEmpty()
-
-                    val tambahan = ModelTambahan(
-                        idTambahan = idTambahan,
-                        namaTambahan = namaTambahan,
-                        hargaTambahan = hargaTambahan
-                    )
-                    dataList.add(tambahan)
-
-                    // Update the RecyclerView adapter correctly
-                    if (rvLayananTambahan.adapter == null) {
-                        rvLayananTambahan.adapter = AdapterPilihTambahan(
-                            dataList,
-                            enableLongDelete = true
-                        ) { position ->
-                            dataList.removeAt(position)
-                            rvLayananTambahan.adapter?.notifyItemRemoved(position)
-                        }
-                    } else {
-                        (rvLayananTambahan.adapter as AdapterPilihTambahan).notifyDataSetChanged()
+                    // Directly get the list of selected additional services
+                    val selectedList = data.getSerializableExtra("selected_tambahan_list") as? ArrayList<ModelTambahan>
+                    selectedList?.let {
+                        dataList.clear()
+                        dataList.addAll(it)
+                        additionalServiceAdapter.setSelectedItems(dataList) // Update adapter's selected items
+                        additionalServiceAdapter.notifyDataSetChanged() // Notify adapter of data change
                     }
-
                 }
             }
         } else if (resultCode == RESULT_CANCELED) {

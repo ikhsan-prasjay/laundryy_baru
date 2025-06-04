@@ -1,82 +1,77 @@
-package com.example.laundry.adapter
 
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.CheckBox
+package com.raihanmahesa.adapter
+
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
+import android.util.Log
+import android.view.*
+import android.widget.ImageButton
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.laundry.Data_model.ModelTambahan
-import com.example.laundry.R
-import java.text.NumberFormat
-import java.util.*
+import com.raihanmahesa.laundry.R
+import com.raihanmahesa.modeldata.model_tambahan
 
 class AdapterPilihTambahan(
-    private val listTambahan: ArrayList<ModelTambahan>,
-    private val onItemSelected: (ModelTambahan, Boolean) -> Unit // Lambda untuk callback ke Activity
+    private val listTambahan: MutableList<model_tambahan>,
+    private val enableLongDelete: Boolean = false, // true hanya di DataTransaksi
+    private val onDelete: ((Int) -> Unit)? = null
 ) : RecyclerView.Adapter<AdapterPilihTambahan.ViewHolder>() {
 
-    // Menyimpan daftar item yang saat ini dipilih
-    private val selectedItems = hashSetOf<ModelTambahan>()
+    private val visibleDeleteSet = mutableSetOf<Int>()
+    lateinit var appContext: Context
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.card_pilih_tambahan, parent, false)
+        appContext = parent.context
+        val view = LayoutInflater.from(appContext).inflate(R.layout.card_pilih_tambahan, parent, false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val nomor = position + 1
         val item = listTambahan[position]
-        holder.tvNamaTambahan.text = item.namaTambahan
-        holder.tvHargaTambahan.text = formatCurrency(item.hargaTambahan?.toIntOrNull() ?: 0)
-        holder.tvCabangTambahan.text = item.cabang
 
-        // Set status CheckBox berdasarkan apakah item ada di selectedItems
-        holder.cbPilihTambahan.isChecked = selectedItems.contains(item)
+        holder.tvID.text = "[$nomor]"
+        holder.tvNama.text = item.namaTambahan ?: "Tidak ada nama"
+        holder.tvHarga.text = "Harga: Rp ${item.hargaTambahan ?: "0"}"
 
-        // Set listener untuk CheckBox
-        holder.cbPilihTambahan.setOnClickListener {
-            if (holder.cbPilihTambahan.isChecked) {
-                selectedItems.add(item)
-            } else {
-                selectedItems.remove(item)
+        // Tampilkan atau sembunyikan tombol delete
+        holder.btnDelete.visibility = if (visibleDeleteSet.contains(position)) View.VISIBLE else View.GONE
+
+        // Long click untuk tampilkan tombol delete
+        if (enableLongDelete) {
+            holder.cvCARD.setOnLongClickListener {
+                visibleDeleteSet.add(position)
+                notifyItemChanged(position)
+                true
             }
-            onItemSelected(item, holder.cbPilihTambahan.isChecked) // Beri tahu Activity tentang perubahan pilihan
+        } else {
+            // Klik biasa untuk memilih data tambahan
+            holder.cvCARD.setOnClickListener {
+                val intent = Intent()
+                intent.putExtra("idTambahan", item.idTambahan)
+                intent.putExtra("namaTambahan", item.namaTambahan)
+                intent.putExtra("hargaTambahan", item.hargaTambahan)
+                (appContext as Activity).setResult(Activity.RESULT_OK, intent)
+                (appContext as Activity).finish()
+            }
         }
 
-        // Juga memungkinkan klik pada seluruh card untuk mengubah CheckBox
-        holder.itemView.setOnClickListener {
-            holder.cbPilihTambahan.isChecked = !holder.cbPilihTambahan.isChecked // Toggle status CheckBox
-            holder.cbPilihTambahan.callOnClick() // Panggil listener CheckBox untuk memicu logika pemilihan
+        // Klik tombol hapus
+        holder.btnDelete.setOnClickListener {
+            onDelete?.invoke(position)
+            visibleDeleteSet.remove(position)
         }
     }
 
-    override fun getItemCount(): Int {
-        return listTambahan.size
-    }
-
-    // Metode untuk mendapatkan daftar item yang dipilih (dipanggil dari Activity)
-    fun getSelectedItems(): ArrayList<ModelTambahan> {
-        return ArrayList(selectedItems)
-    }
-
-    // Metode untuk mengatur item yang sudah dipilih sebelumnya (misal saat edit transaksi)
-    fun setSelectedItems(items: List<ModelTambahan>) {
-        selectedItems.clear()
-        selectedItems.addAll(items)
-        notifyDataSetChanged() // Perbarui tampilan RecyclerView
-    }
-
-    // Fungsi helper untuk format mata uang
-    private fun formatCurrency(amount: Int): String {
-        val format = NumberFormat.getCurrencyInstance(Locale("id", "ID"))
-        return format.format(amount).replace("IDR", "Rp")
-    }
+    override fun getItemCount(): Int = listTambahan.size
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val cbPilihTambahan: CheckBox = itemView.findViewById(R.id.cbPilihTambahan)
-        val tvNamaTambahan: TextView = itemView.findViewById(R.id.tvNamaTambahan)
-        val tvHargaTambahan: TextView = itemView.findViewById(R.id.tvHargaTambahan)
-        val tvCabangTambahan: TextView = itemView.findViewById(R.id.tvCabangTambahan)
+        val tvID: TextView = itemView.findViewById(R.id.tvCARD_PILIHTAMBAHAN_ID)
+        val tvNama: TextView = itemView.findViewById(R.id.tvCARD_PILIHTAMBAHAN_nama)
+        val tvHarga: TextView = itemView.findViewById(R.id.tvCARD_PILIHTAMBAHAN_harga)
+        val cvCARD: CardView = itemView.findViewById(R.id.cvCARD_PILIHTAMBAHAN)
+        val btnDelete: ImageButton = itemView.findViewById(R.id.btnDelete)
     }
 }
