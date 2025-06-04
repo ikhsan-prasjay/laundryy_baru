@@ -48,6 +48,25 @@
     <string name="detailpegawai">employee details</string>
     <string name="namapegawai">employee name</string>
     <string name="etcard_alamat">employee address</string>
-    <string name="etcard_nohp">employee\'s phone number</string>
+    <string name="etcard_nohp">phone number</string>
     <string name="Hapus">Delete</string>
+    <string name="KonfirmasiDataTransaksi">Confirm Transaction Data</string>
+    <string name="DataPelanggan">Customer Data</string>
+    <string name="nama">name</string>
+    <string name="layananutama">main service</string>
+    <string name="namalayanan">service name</string>
+    <string name="layanantambahan">additional services</string>
+    <string name="totalbayar">total payment</string>
+    <string name="batal">cencel</string>
+    <string name="pembayaran">payment</string>
+    <string name="detailpelanggan">customer details</string>
+    <string name="card_namapelanggan">customer name</string>
+    <string name="pilihpelanggan">select customer</string>
+    <string name="pilihlayanan">select service</string>
+    <string name="tambahan">addition</string>
+    <string name="Proses">Process</string>
+    <string name="Idlayanan">Service ID</string>
+    <string name="PilihMetodePembayaran">Select Payment Method</string>
+    <string name="bayarnanti">pay later</string>
+    <string name="cardTunai">Cash</string>
 </resources>

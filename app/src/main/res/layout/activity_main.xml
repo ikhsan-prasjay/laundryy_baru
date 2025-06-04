@@ -86,7 +86,7 @@
                 app:layout_constraintHorizontal_chainStyle="spread_inside">
 
                 <ImageView
-                    android:id="@+id/transaksi"
+                    android:id="@+id/Ivtransaksi"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="10dp"

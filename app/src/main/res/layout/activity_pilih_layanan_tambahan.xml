@@ -5,9 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PilihLayananActivity">
-
-
+    tools:context=".Pilih_Layanan_Tambahan_Activity">
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
@@ -21,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Tidak ada data layanan"
+        android:text="Tidak ada data tambahan"
         android:textSize="16sp"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,7 +27,7 @@
         app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvPILIH_LAYANAN"
+        android:id="@+id/rvPILIH_TAMBAHAN"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
@@ -38,6 +36,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvKosong"
-        tools:listitem="@layout/card_pilih_layanan" />
-
+        tools:listitem="@layout/card_pilih_tambahan" />
 </androidx.constraintlayout.widget.ConstraintLayout>

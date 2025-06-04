@@ -1,52 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">laundry</string>
     <string name="card_data_pelanggan">ID Pelanggan</string>
     <string name="NAMA_Pelanggan">Nama Pelanggan</string>
     <string name="Mamat">Alamat</string>
     <string name="nomer">no HP Aktif</string>
-    <string name="selamat">Selamat Pagi,Ikhsan</string>
+    <string name="selamat">Selamat Pagi, Ikhsan</string>
     <string name="estimasi">Estimasi Hari ini</string>
     <string name="siap">Siap melayani Pelanggan dengan sepenuh hati</string>
+
+    <!-- Validasi -->
     <string name="validasi_nama_pelanggan">validasi_nama_pelanggan</string>
     <string name="validasi_alamat_pelanggan">validasi_alamat_pelanggan</string>
     <string name="validasi_nohp_pelanggan">validasi_nohp_pelanggan</string>
-    <string name="berhasil_tambah_pelanggan">berhasil_tambah_pelanggan</string>
-    <string name="pelanggan_tambah_gagal">pelanggan_tambah_gagal</string>
     <string name="validasi_nama_pegawai">validasi_nama_pegawai</string>
     <string name="validasi_alamat_pegawai">validasi_alamat_pegawai</string>
     <string name="validasi_nohp_pegawai">validasi_nohp_pegawai</string>
-    <string name="berhasil_tambah_pegawai">berhasil tambah pegawai</string>
-    <string name="pegawai_tambah_gagal">pelanggan tambah gagal</string>
-    <string name="tambah_layanan">tambah_layanan</string>
-    <string name="validasi_nama_layanan">validasi_nama_layana</string>
+    <string name="validasi_nama_layanan">validasi_nama_layanan</string>
     <string name="validasi_harga_layanan">validasi_harga_layanan</string>
     <string name="validasi_cabang_layanan">validasi_cabang_layanan</string>
+    <string name="validasi_cabang_pelanggan">validasi_cabang_pelanggan</string>
+    <string name="validasi_nama_tambahan">validasi nama tambahan</string>
+    <string name="validasi_alamat_tambahan">validasi alamat tambahan</string>
+    <string name="validasi_cabang_tambahan">validasi cabang tambahan</string>
+
+    <!-- Status -->
+    <string name="berhasil_tambah_pelanggan">berhasil_tambah_pelanggan</string>
+    <string name="pelanggan_tambah_gagal">pelanggan_tambah_gagal</string>
+    <string name="berhasil_tambah_pegawai">berhasil tambah pegawai</string>
+    <string name="pegawai_tambah_gagal">pelanggan tambah gagal</string>
     <string name="tambah_layanan_sukses">tambah_layanan_sukses</string>
     <string name="tambah_layanan_gagal">tambah_layanan_gagal</string>
-    <string name="validasi_cabang_pelanggan">validasi_cabang_pelanggan</string>
-    <string name="cabang">cabang</string>
-    <string name="terdaftar">terdaftar</string>
+    <string name="tambah_tambahan_sukses">tambah tambahan sukses</string>
+    <string name="tambah_tambahan_gagal">tambah tambahan gagal</string>
+
+    <!-- Pelanggan -->
     <string name="tambahkanpelanggan">tambahkan pelanggan</string>
     <string name="namalengkap">nama lengkap</string>
     <string name="hubungi">hubungi</string>
     <string name="lihat">lihat</string>
-    <string name="ID_Tambahan">ID_Tambahan</string>
-    <string name="namatambahan">namatambahan</string>
-    <string name="harga">harga</string>
-    <string name="card_cabang">cabang</string>
-    <string name="tambahtambahan">tambahtambahan</string>
-    <string name="etnamatambahan">nama tambahan</string>
-    <string name="etharga">harga</string>
-    <string name="button_simpan">simpan</string>
-    <string name="namaCabang">nama cabang</string>
-    <string name="validasi_nama_tambahan">validasi nama tambahan</string>
-    <string name="validasi_alamat_tambahan">validasi alamat tambahan</string>
-    <string name="validasi_cabang_tambahan">validasi cabang tambahan</string>
-    <string name="tambah_tambahan_sukses">tambah ambahan sukses</string>
-    <string name="tambah_tambahan_gagal">tambah tambahan gagal</string>
+    <string name="card_namapelanggan">nama pelanggan</string>
+    <string name="etcard_nohp">nohp</string>
+    <string name="detailpelanggan">detail pelanggan</string>
+    <string name="DataPelanggan">Data Pelanggan</string>
+
+    <!-- Pegawai -->
     <string name="detailpegawai">detail pegawai</string>
     <string name="namapegawai">nama pegawai</string>
     <string name="etcard_alamat">alamat pegawai</string>
-    <string name="etcard_nohp">nohp pegawai</string>
+
+    <!-- Layanan -->
+    <string name="layananutama">layanan utama</string>
+    <string name="namalayanan">nama layanan</string>
+    <string name="layanantambahan">layanan tambahan</string>
+    <string name="tambah_layanan">tambah_layanan</string>
+    <string name="pilihlayanan">pilih layanan</string>
+    <string name="pilihpelanggan">pilih pelanggan</string>
+    <string name="tambahtambahan">tambahtambahan</string>
+    <string name="etnamatambahan">nama tambahan</string>
+    <string name="etharga">harga</string>
+    <string name="harga">harga</string>
+
+    <!-- Cabang -->
+    <string name="cabang">cabang</string>
+    <string name="card_cabang">cabang</string>
+    <string name="namaCabang">nama cabang</string>
+    <string name="terdaftar">terdaftar</string>
+
+    <!-- Tombol -->
+    <string name="button_simpan">simpan</string>
     <string name="Hapus">Hapus</string>
+    <string name="tambahan">tambahan</string>
+    <string name="Proses">Proses</string>
+    <string name="batal">batal</string>
+    <string name="pembayaran">pembayaran</string>
+
+    <!-- Konfirmasi -->
+    <string name="KonfirmasiDataTransaksi">Konfirmasi Data Transaksi</string>
+    <string name="totalbayar">total bayar</string>
+
+    <!-- ID -->
+    <string name="ID_Tambahan">ID_Tambahan</string>
+    <string name="nama">nama</string>
+    <string name="namatambahan">namatambahan</string>
+    <string name="Idlayanan">Id layanan</string>
+    <string name="PilihMetodePembayaran">Pilih Metode Pembayaran</string>
+    <string name="bayarnanti">bayar nanti</string>
+    <string name="cardTunai">Tunai</string>
 </resources>

@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var pegawai: CardView
     lateinit var cvLayanan: CardView
     lateinit var cvtambahan: CardView
+    lateinit var Ivtransaksi: ImageView
 
     @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         pegawai = findViewById(R.id.pegawai)
         cvLayanan = findViewById(R.id.cvLayanan)
         cvtambahan = findViewById(R.id.cvtambahan)
+        Ivtransaksi = findViewById(R.id.Ivtransaksi)
 
         // event klik
         ivpelanggan.setOnClickListener {
@@ -48,6 +50,10 @@ class MainActivity : AppCompatActivity() {
         }
         cvtambahan.setOnClickListener {
             val intent = Intent(this, Data_Tambahan_Activity2::class.java)
+            startActivity(intent)
+        }
+        Ivtransaksi.setOnClickListener {
+            val intent = Intent(this, Data_Transaksi_Activity::class.java)
             startActivity(intent)
         }
 

@@ -12,10 +12,10 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.example.laundry.Data_model.ModelPegawai
 import com.example.laundry.Tambah_PegawaiActivity2
+import com.google.firebase.database.DatabaseReference
 
 class AdapterDataPegawai(
     private val listPegawai: ArrayList<ModelPegawai>) :
@@ -71,10 +71,10 @@ class AdapterDataPegawai(
 
             btEdit?.setOnClickListener {
                 val intent = Intent(holder.itemView.context, Tambah_PegawaiActivity2::class.java)
-                intent.putExtra("idPelanggan", item.idPegawai)
-                intent.putExtra("namaPelanggan", item.namaPegawai)
-                intent.putExtra("alamatPelanggan", item.alamatPegawai)
-                intent.putExtra("noHpPelanggan", item.noHPPegawai)
+                intent.putExtra("idPegawai", item.idPegawai)
+                intent.putExtra("namaPegawai", item.namaPegawai)
+                intent.putExtra("alamatPegawai", item.alamatPegawai)
+                intent.putExtra("noHPPegawai", item.noHPPegawai)
                 intent.putExtra("cabangPegawai", item.cabangPegawai)
                 holder.itemView.context.startActivity(intent)
                 alertDialog.dismiss()
@@ -86,7 +86,7 @@ class AdapterDataPegawai(
                     .setMessage("Yakin ingin menghapus data ini?")
                     .setPositiveButton("Ya") { _, _ ->
                         val dbRef = FirebaseDatabase.getInstance()
-                            .getReference("Pelanggan")
+                            .getReference("pegawai")
                             .child(item.idPegawai ?: "")
 
                         dbRef.removeValue().addOnSuccessListener {

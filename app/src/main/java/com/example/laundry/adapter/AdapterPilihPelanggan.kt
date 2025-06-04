@@ -12,15 +12,15 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.laundry.Data_Transaksi_Activity
-import com.example.laundry.Data_model.ModelLayanan
 import com.example.laundry.R
+import com.example.laundry.Data_model.ModelPelanggan
 import com.google.firebase.database.DatabaseReference
 
 
-class AdapterPilihLayanan(private val listLayanan: ArrayList<ModelLayanan>) :
-    RecyclerView.Adapter<AdapterPilihLayanan.ViewHolder>() {
+class AdapterPilihPelanggan(private val listPelanggan: ArrayList<ModelPelanggan>) :
+    RecyclerView.Adapter<AdapterPilihPelanggan.ViewHolder>() {
 
-    private val TAG = "AdapterPilihLayanan"
+    private val TAG = "AdapterPilihPelanggan"
     lateinit var appContext: Context
     lateinit var databaseReference: DatabaseReference
 
@@ -29,7 +29,7 @@ class AdapterPilihLayanan(private val listLayanan: ArrayList<ModelLayanan>) :
     ): ViewHolder {
         Log.d(TAG, "onCreateViewHolder called")
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.card_pilih_layanan, parent, false)
+            .inflate(R.layout.card_pilih_pelanggan, parent, false)
         appContext = parent.context
         return ViewHolder(view)
     }
@@ -37,21 +37,22 @@ class AdapterPilihLayanan(private val listLayanan: ArrayList<ModelLayanan>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         Log.d(TAG, "onBindViewHolder for position: $position")
         val nomor = position + 1
-        val item = listLayanan[position]
+        val item = listPelanggan[position]
 
         try {
             holder.tvID.text = "[$nomor]"
-            holder.tvNama.text = item.namalayanan ?: "Nama tidak tersedia"
-            holder.tvHarga.text = "No HP : ${item.hargalayanan ?: "Tidak tersedia"}"
+            holder.tvNama.text = item.namaPelanggan ?: "Nama tidak tersedia"
+            holder.tvAlamat.text = "Alamat : ${item.alamatPelanggan ?: "Tidak tersedia"}"
+            holder.tvNoHP.text = "No HP : ${item.noHPPelanggan ?: "Tidak tersedia"}"
 
-            Log.d(TAG, "Binding data: ${item.namalayanan} at position $position")
+            Log.d(TAG, "Binding data: ${item.namaPelanggan} at position $position")
 
             holder.cvCARD.setOnClickListener {
                 try {
                     val intent = Intent(appContext, Data_Transaksi_Activity::class.java)
-                    intent.putExtra("idPelanggan", item.idlayanan)
-                    intent.putExtra("nama", item.namalayanan)
-                    intent.putExtra("harga", item.hargalayanan)
+                    intent.putExtra("idPelanggan", item.idPelanggan)
+                    intent.putExtra("nama", item.namaPelanggan)
+                    intent.putExtra("noHP", item.noHPPelanggan)
                     (appContext as Activity).setResult(Activity.RESULT_OK, intent)
                     (appContext as Activity).finish()
                 } catch (e: Exception) {
@@ -65,15 +66,16 @@ class AdapterPilihLayanan(private val listLayanan: ArrayList<ModelLayanan>) :
     }
 
     override fun getItemCount(): Int {
-        val count = listLayanan.size
+        val count = listPelanggan.size
         Log.d(TAG, "getItemCount: $count")
         return count
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvID: TextView = itemView.findViewById(R.id.tvCARD_PIlih_layanan_ID)
-        val tvNama: TextView = itemView.findViewById(R.id.tvCARD_Pilih_Layanan_nama)
-        val tvHarga: TextView = itemView.findViewById(R.id.tvCARD_Pilih_Layanan_harga)
-        val cvCARD: CardView = itemView.findViewById(R.id.card_pilih_layanan)
+        val tvID: TextView = itemView.findViewById(R.id.ID_pilih_pelanggan)
+        val tvNama: TextView = itemView.findViewById(R.id.tvCARD_Pilih_PELANGGAN_nama)
+        val tvAlamat: TextView = itemView.findViewById(R.id.tvCARD_PIlih_PELANGGAN_alamat)
+        val tvNoHP: TextView = itemView.findViewById(R.id.tvCARD_Pilih_PELANGGAN_nohp)
+        val cvCARD: CardView = itemView.findViewById(R.id.card_pilih_pelanggan)
     }
 }

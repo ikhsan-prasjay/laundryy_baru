@@ -15,7 +15,7 @@
 
         <TextView
 
-            android:id="@+id/IDpelanggan"
+            android:id="@+id/ID_pilih_pelanggan"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="#9EB8AB"
@@ -33,7 +33,7 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/tvCARD_PELANGGAN_nama"
+                android:id="@+id/tvCARD_Pilih_PELANGGAN_nama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/NAMA_Pelanggan"
@@ -41,7 +41,7 @@
                 android:layout_marginBottom="4dp"/>
 
             <TextView
-                android:id="@+id/tvCARD_PELANGGAN_alamat"
+                android:id="@+id/tvCARD_PIlih_PELANGGAN_alamat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Mamat"
@@ -49,7 +49,7 @@
                 android:layout_marginBottom="2dp"/>
 
             <TextView
-                android:id="@+id/tvCARD_PELANGGAN_nohp"
+                android:id="@+id/tvCARD_Pilih_PELANGGAN_nohp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nomer"

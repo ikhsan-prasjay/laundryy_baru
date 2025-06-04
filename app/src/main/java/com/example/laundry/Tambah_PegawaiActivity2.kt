@@ -14,7 +14,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.example.laundry.R
 import com.example.laundry.Data_model.ModelPegawai
 
-class Tambah_PegawaiActivity2 : AppCompatActivity() {
+class Tambah_PegawaiActivity2    : AppCompatActivity() {
     val database = FirebaseDatabase.getInstance()
     val myRef = database.getReference("pegawai")
     lateinit var tvJudul: TextView
@@ -37,7 +37,7 @@ class Tambah_PegawaiActivity2 : AppCompatActivity() {
             val nama = dataIntent.getStringExtra("namaPegawai")
             val alamat = dataIntent.getStringExtra("alamatPegawai")
             val noHp = dataIntent.getStringExtra("noHpPegawai")
-            val cabang = dataIntent.getStringExtra("cabangPegawai")
+            val cabang = dataIntent.getStringExtra("idCabang")
 
 
             if (pegawaiId != null) {
@@ -135,9 +135,9 @@ class Tambah_PegawaiActivity2 : AppCompatActivity() {
 
     fun update() {
         val dataUpdate = mapOf(
-            "namaPelanggan" to etNama.text.toString(),
-            "alamatPelanggan" to etAlamat.text.toString(),
-            "noHPPelanggan" to etNoHP.text.toString(),
+            "namaPegawai" to etNama.text.toString(),
+            "alamatPegawai" to etAlamat.text.toString(),
+            "noHPPegawai" to etNoHP.text.toString(),
             "cabangPegawai" to etCabang.text.toString()
         )
 
