@@ -5,13 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey_light"
     tools:context=".Data_Cabang_Activity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvDATA_PEGAWAI"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/Card_data_cabang">
+        tools:listitem="@layout/card_data_cabang">
     </androidx.recyclerview.widget.RecyclerView>
 
     <RelativeLayout
@@ -24,9 +25,11 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:src="@drawable/customer"
+            app:tint="@color/white"
+            app:backgroundTint="@color/orange_primary"
             tools:ignore="SpeakableTextPresentCheck" />
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

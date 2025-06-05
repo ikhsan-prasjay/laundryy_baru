@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey_light"
     tools:context=".Data_laporan_Activity">
     <TextView
         android:id="@+id/tvTitleLaporan"
@@ -15,6 +16,8 @@
         android:textStyle="bold"
         android:gravity="center"
         android:padding="16dp"
+        android:textColor="@color/grey_dark"
+        android:background="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

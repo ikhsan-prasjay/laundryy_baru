@@ -85,6 +85,6 @@
         <activity
             android:name=".Data_laporan_Activity"
             android:exported="false" />
-
     </application>
+
 </manifest>

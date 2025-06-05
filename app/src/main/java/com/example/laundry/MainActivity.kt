@@ -21,7 +21,9 @@ class MainActivity : AppCompatActivity() {
     lateinit var cvLayanan: CardView
     lateinit var cvtambahan: CardView
     lateinit var Ivtransaksi: ImageView
-    lateinit var laporan: ImageView // Add this for the report icon
+    lateinit var laporan: ImageView
+    lateinit var cvCabang2: CardView // Tambahkan ini
+
 
     @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +37,9 @@ class MainActivity : AppCompatActivity() {
         cvLayanan = findViewById(R.id.cvLayanan)
         cvtambahan = findViewById(R.id.cvtambahan)
         Ivtransaksi = findViewById(R.id.Ivtransaksi)
-        laporan = findViewById(R.id.laporan) // Initialize the report icon
+        laporan = findViewById(R.id.laporan)
+        cvCabang2 = findViewById(R.id.cvCabang2) // Inisialisasi ini
+
 
         // event klik
         ivpelanggan.setOnClickListener {
@@ -59,8 +63,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Data_Transaksi_Activity::class.java)
             startActivity(intent)
         }
-        laporan.setOnClickListener { // Set click listener for the report icon
+        laporan.setOnClickListener {
             val intent = Intent(this, Data_laporan_Activity::class.java)
+            startActivity(intent)
+        }
+        cvCabang2.setOnClickListener { // Tambahkan listener ini
+            val intent = Intent(this, Data_Cabang_Activity::class.java)
             startActivity(intent)
         }
 
