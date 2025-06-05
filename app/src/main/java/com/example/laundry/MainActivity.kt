@@ -1,3 +1,4 @@
+// app/src/main/java/com/example/laundry/MainActivity.kt
 package com.example.laundry
 
 import android.annotation.SuppressLint
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var cvLayanan: CardView
     lateinit var cvtambahan: CardView
     lateinit var Ivtransaksi: ImageView
+    lateinit var laporan: ImageView // Add this for the report icon
 
     @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         cvLayanan = findViewById(R.id.cvLayanan)
         cvtambahan = findViewById(R.id.cvtambahan)
         Ivtransaksi = findViewById(R.id.Ivtransaksi)
+        laporan = findViewById(R.id.laporan) // Initialize the report icon
 
         // event klik
         ivpelanggan.setOnClickListener {
@@ -54,6 +57,10 @@ class MainActivity : AppCompatActivity() {
         }
         Ivtransaksi.setOnClickListener {
             val intent = Intent(this, Data_Transaksi_Activity::class.java)
+            startActivity(intent)
+        }
+        laporan.setOnClickListener { // Set click listener for the report icon
+            val intent = Intent(this, Data_laporan_Activity::class.java)
             startActivity(intent)
         }
 

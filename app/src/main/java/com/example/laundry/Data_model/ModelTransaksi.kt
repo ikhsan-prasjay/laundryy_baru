@@ -1,3 +1,4 @@
+// app/src/main/java/com/example/laundry/Data_model/ModelTransaksi.kt
 package com.example.laundry.Data_model
 
 class  ModelTransaksi(
@@ -10,5 +11,6 @@ class  ModelTransaksi(
     val tambahan: List<ModelTambahan> = emptyList(),
     val tanggal: String = "",
     val idPegawai: String = "",
-    val idCabang: String = ""
+    val idCabang: String = "",
+    val statusTransaksi: String = "Belum Dibayar" // Tambahkan properti statusTransaksi
 )
