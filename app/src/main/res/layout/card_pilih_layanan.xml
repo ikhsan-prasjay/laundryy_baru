@@ -1,12 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    card_view:cardCornerRadius="8dp"
+    card_view:cardCornerRadius="12dp"
     card_view:cardElevation="4dp"
     android:id="@+id/card_pilih_layanan"
-    android:layout_margin="20dp">
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    card_view:cardBackgroundColor="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,16 +18,17 @@
         android:orientation="vertical">
 
         <TextView
-
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="#9EB8AB"
+            android:layout_height="48dp"
+            android:background="@color/green_success"
             android:gravity="center_vertical"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
-            android:text="1"
-            android:textColor="#212121"
-            android:textSize="16sp" />
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            tools:text="ID Layanan: L001"
+            android:textColor="@color/grey_text_dark"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:id="@+id/tvCARD_PIlih_layanan_ID" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,30 +37,24 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/tvCARD_PIlih_layanan_ID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Idlayanan"
-                android:textSize="14sp"
-                android:layout_marginBottom="4dp"/>
-
-            <TextView
                 android:id="@+id/tvCARD_Pilih_Layanan_nama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/namalayanan"
-                android:textSize="14sp"
-                android:layout_marginBottom="2dp"/>
+                tools:text="Nama Layanan: Cuci Kering Setrika"
+                android:textColor="@color/grey_text_dark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp"/>
 
             <TextView
                 android:id="@+id/tvCARD_Pilih_Layanan_harga"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/harga"
-                android:textSize="14sp"
+                tools:text="Harga: Rp 15.000"
+                android:textColor="@color/light_blue_dark"
+                android:textSize="15sp"
+                android:textStyle="bold"
                 android:layout_marginBottom="2dp"/>
-
-
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF9FF"
+    android:background="@color/white"
     tools:context=".invoice_Activity">
 
     <ScrollView
@@ -16,237 +16,268 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/tv_business_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="LAUNDRY"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:layout_gravity="center_horizontal"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:id="@+id/tv_branch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="SOLO"
-                android:textSize="18sp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="16dp"
-                android:textColor="@color/black" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/darker_gray"
-                android:layout_marginBottom="8dp" />
+            android:layout_margin="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/white">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="4dp">
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/tv_business_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LAUNDRY MODERN"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/light_blue_dark"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tv_branch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CABANG SOLO"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="24dp"
+                    android:textColor="@color/grey_text_dark" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_medium"
+                    android:layout_marginBottom="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ID Transaksi: "
+                        android:textColor="@color/grey_text_dark"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tv_transaction_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="TRX12345678"
+                        android:textColor="@color/grey_text_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tanggal: "
+                        android:textColor="@color/grey_text_dark"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="2025-01-08 10:30:00"
+                        android:textColor="@color/grey_text_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pelanggan: "
+                        android:textColor="@color/grey_text_dark"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tv_customer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="John Doe"
+                        android:textColor="@color/grey_text_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="24dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kasir: "
+                        android:textColor="@color/grey_text_dark"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tv_employee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Admin"
+                        android:textColor="@color/grey_text_dark" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_medium"
+                    android:layout_marginBottom="16dp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ID Transaksi: "
-                    android:textColor="@color/black" />
-                <TextView
-                    android:id="@+id/tv_transaction_id"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:text="TRX12345678"
-                    android:textColor="@color/black" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="4dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tanggal: "
-                    android:textColor="@color/black" />
-                <TextView
-                    android:id="@+id/tv_date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:text="2025-01-08 10:30:00"
-                    android:textColor="@color/black" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="4dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Pelanggan: "
-                    android:textColor="@color/black" />
-                <TextView
-                    android:id="@+id/tv_customer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:text="John Doe"
-                    android:textColor="@color/black" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Kasir: "
-                    android:textColor="@color/black" />
-                <TextView
-                    android:id="@+id/tv_employee"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:text="Admin"
-                    android:textColor="@color/black" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/darker_gray"
-                android:layout_marginBottom="8dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="LAYANAN UTAMA:"
-                android:textColor="@color/black"
-                android:layout_marginBottom="4dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="2"
-                android:layout_marginBottom="4dp">
-                <TextView
-                    android:id="@+id/tv_main_service"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.5"
-                    tools:text="Cuci Kering Lipat (CKL)"
-                    android:textColor="@color/black" />
-                <TextView
-                    android:id="@+id/tv_main_service_price"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:gravity="end"
-                    tools:text="Rp 10.000"
-                    android:textColor="@color/black" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/darker_gray"
-                android:layout_marginBottom="8dp" />
-
-            <TextView
-                android:id="@+id/tv_additional_services_header"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="LAYANAN TAMBAHAN:"
-                android:textColor="@color/black"
-                android:layout_marginBottom="4dp" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_additional_services"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:nestedScrollingEnabled="false"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:itemCount="3"
-                tools:listitem="@layout/item_additional_service"
-                android:layout_marginBottom="8dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="2"
-                android:layout_marginBottom="8dp">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.5"
-                    android:text="Subtotal Tambahan: "
-                    android:textColor="@color/black" />
-                <TextView
-                    android:id="@+id/tv_subtotal_additional"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:gravity="end"
-                    tools:text="Rp 5.000"
-                    android:textColor="@color/black" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/darker_gray"
-                android:layout_marginBottom="8dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="2"
-                android:layout_marginBottom="16dp">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.5"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:text="TOTAL: "
-                    android:textColor="@color/black" />
-                <TextView
-                    android:id="@+id/tv_total"
-                    android:layout_width="0dp"
+                    android:text="LAYANAN UTAMA:"
+                    android:textColor="@color/light_blue_dark"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:id="@+id/tv_main_service"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        tools:text="Cuci Kering Lipat (CKL)"
+                        android:textSize="16sp"
+                        android:textColor="@color/grey_text_dark" />
+                    <TextView
+                        android:id="@+id/tv_main_service_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="end"
+                        tools:text="Rp 10.000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/grey_text_dark" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_medium"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_additional_services_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    tools:text="Rp 15.000"
-                    android:textColor="@color/black" />
+                    android:text="LAYANAN TAMBAHAN:"
+                    android:textColor="@color/light_blue_dark"
+                    android:layout_marginBottom="8dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_additional_services"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/item_additional_service"
+                    android:layout_marginBottom="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="24dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="Subtotal Tambahan: "
+                        android:textSize="16sp"
+                        android:textColor="@color/grey_text_dark" />
+                    <TextView
+                        android:id="@+id/tv_subtotal_additional"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="end"
+                        tools:text="Rp 5.000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/grey_text_dark" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_medium"
+                    android:layout_marginBottom="24dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="32dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:text="TOTAL: "
+                        android:textColor="@color/light_blue_dark" />
+                    <TextView
+                        android:id="@+id/tv_total"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="end"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        tools:text="Rp 15.000"
+                        android:textColor="@color/light_blue_dark" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Terima kasih atas kepercayaan Anda kepada kami!"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:textColor="@color/grey_text_dark"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hormat kami,\nLaundry Modern"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:textColor="@color/blue_status"
+                    android:textSize="14sp" />
+
             </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Terima kasih atas kepercayaan Anda kepada kami!"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textColor="@color/black"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="32dp" />
-
-        </LinearLayout>
+        </androidx.cardview.widget.CardView>
     </ScrollView>
 
     <LinearLayout
@@ -263,22 +294,26 @@
         <Button
             android:id="@+id/btn_whatsapp"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:text="Bagikan via WhatsApp"
             android:layout_marginEnd="8dp"
             android:backgroundTint="#25D366"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            app:cornerRadius="12dp"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btn_print"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:text="Cetak Struk"
             android:layout_marginStart="8dp"
-            android:backgroundTint="#2196F3"
-            android:textColor="@android:color/white" />
+            android:backgroundTint="@color/blue_status"
+            android:textColor="@android:color/white"
+            app:cornerRadius="12dp"
+            android:textSize="16sp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

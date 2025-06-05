@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Tambah_TambahanActivity">
 
     <TextView
@@ -12,10 +13,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tambahtambahan"
-        android:textSize="20dp"
+        android:textSize="28sp"
         android:textStyle="bold"
-        android:layout_marginTop="50dp"
-        tools:ignore="MissingConstraints"
+        android:textColor="@color/grey_medium"
+        android:layout_marginTop="48dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -24,87 +25,108 @@
         android:id="@+id/tvtambahannama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
         android:text="@string/namatambahan"
-        android:textSize="15dp"
+        android:textSize="16sp"
+        android:textColor="@color/grey_text_dark"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvtambahanjudul"
-        tools:ignore="MissingConstraints,TextSizeCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/tvtambahanjudul" />
 
     <EditText
         android:id="@+id/ettambahannama"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:background="@drawable/rounded_edittext"
         android:hint="@string/etnamatambahan"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/grey_text_dark"
+        android:textColorHint="@color/grey_medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvtambahannama"
-        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+        android:inputType="textCapWords" />
 
     <TextView
         android:id="@+id/tvtambahanharga"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
         android:text="@string/harga"
-        android:textSize="15dp"
+        android:textSize="16sp"
+        android:textColor="@color/grey_text_dark"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ettambahannama"
-        tools:ignore="MissingConstraints,TextSizeCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/ettambahannama" />
 
     <EditText
         android:id="@+id/ettambahanharga"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:background="@drawable/rounded_edittext"
         android:hint="@string/etharga"
         android:maxLength="14"
-        android:inputType="phone"
+        android:inputType="numberDecimal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/grey_text_dark"
+        android:textColorHint="@color/grey_medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvtambahanharga"
-        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/tvtambahanharga" />
 
     <TextView
         android:id="@+id/tvtambahancabang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
         android:text="@string/card_cabang"
-        android:textSize="15dp"
+        android:textSize="16sp"
+        android:textColor="@color/grey_text_dark"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ettambahanharga"
-        tools:ignore="MissingConstraints,TextSizeCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/ettambahanharga" />
 
     <EditText
         android:id="@+id/ettambahancabang"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:background="@drawable/rounded_edittext"
         android:hint="@string/namaCabang"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/grey_text_dark"
+        android:textColorHint="@color/grey_medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvtambahancabang"
-        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+        android:inputType="textCapWords" />
 
     <Button
         android:id="@+id/bttambahansimpan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
         android:text="@string/button_simpan"
         android:layout_marginTop="40dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/blue_status"
+        app:cornerRadius="12dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ettambahancabang"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@id/ettambahancabang" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

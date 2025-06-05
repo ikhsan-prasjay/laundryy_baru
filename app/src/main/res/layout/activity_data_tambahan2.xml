@@ -5,30 +5,47 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Data_Tambahan_Activity2">
+
+    <TextView
+        android:id="@+id/tvTitleTambahan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tambahtambahan"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textColor="@color/grey_medium"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvDATA_TAMBAHAN"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleTambahan"
         tools:listitem="@layout/card_data_tambahan">
     </androidx.recyclerview.widget.RecyclerView>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabDATA_PENGGUNA_TambahTambahan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            android:src="@drawable/customer"
-            tools:ignore="SpeakableTextPresentCheck" />
-    </RelativeLayout>
-
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabDATA_PENGGUNA_TambahTambahan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/tambah"
+        app:tint="@color/white"
+        app:backgroundTint="@color/blue_status"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/tambahtambahan" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

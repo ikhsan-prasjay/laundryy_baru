@@ -1,4 +1,3 @@
-// app/src/main/java/com/example/laundry/Konfirmasi_data_Transaksi_Activity.kt
 package com.example.laundry
 
 import android.annotation.SuppressLint
@@ -51,6 +50,7 @@ class Konfirmasi_data_Transaksi_Activity : AppCompatActivity() {
     }
 
     private fun initViews() {
+        // Explicitly cast to TextView to match the variable type
         tvNamaPelanggan = findViewById(R.id.tvNamaPelangganKonfirmasi)
         tvNoHP = findViewById(R.id.tvNoHPKonfimasi)
         tvNamaLayanan = findViewById(R.id.tvNamaLayananKonfimasi)

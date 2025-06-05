@@ -5,15 +5,19 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Konfirmasi_data_Transaksi_Activity">
 
-    <!-- Header Card -->
     <androidx.cardview.widget.CardView
         android:id="@+id/headerCard"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        app:cardCornerRadius="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -22,9 +26,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="20dp">
 
-            <!-- Judul -->
             <TextView
                 android:id="@+id/tvJudulKonfimasi"
                 android:layout_width="match_parent"
@@ -32,100 +35,86 @@
                 android:text="@string/KonfirmasiDataTransaksi"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                android:textColor="#1A1A1A"
+                android:textColor="@color/grey_medium"
                 android:gravity="center"
                 android:layout_marginBottom="16dp" />
 
-            <!-- Data Pelanggan Section -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@drawable/rounded_background"
-                android:padding="12dp">
+                android:padding="16dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/DataPelanggan"
                     android:textStyle="bold"
-                    android:textColor="#2E5BFF"
-                    android:textSize="14sp"
-                    android:layout_marginBottom="8dp" />
+                    android:textColor="@color/grey_text_dark"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="12dp" />
 
-                <!-- Nama Pelanggan -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginBottom="4dp">
+                    android:id="@+id/tvNamaPelangganKonfirmasi"
+                    android:layout_marginBottom="8dp">
 
                     <TextView
-                        android:layout_width="80dp"
+                        android:layout_width="90dp"
                         android:layout_height="wrap_content"
                         android:text="@string/nama"
-                        android:textColor="#1A1A1A"
-                        android:textSize="14sp"/>
+                        android:textColor="@color/grey_text_dark"
+                        android:textSize="15sp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=": "
-                        android:textColor="#1A1A1A"
+                        android:textColor="@color/grey_text_dark"
                         android:layout_marginEnd="8dp" />
 
-                    <TextView
-                        android:id="@+id/tvNamaPelangganKonfirmasi"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Nama Pelanggan"
-                        android:textSize="14sp"
-                        android:textColor="#1A1A1A"
-                        android:textStyle="bold" />
+
                 </LinearLayout>
 
-                <!-- Nomor HP -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/tvNoHPKonfimasi"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="80dp"
+                        android:layout_width="90dp"
                         android:layout_height="wrap_content"
                         android:text="@string/etcard_nohp"
-                        android:textColor="#1A1A1A"
-                        android:textSize="14sp" />
+                        android:textColor="@color/grey_text_dark"
+                        android:textSize="15sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=": "
-                        android:textColor="#1A1A1A"
+                        android:textColor="@color/grey_text_dark"
                         android:layout_marginEnd="8dp" />
 
-                    <TextView
-                        android:id="@+id/tvNoHPKonfimasi"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Nomor HP"
-                        android:textSize="14sp"
-                        android:textColor="#1A1A1A"
-                        android:textStyle="bold" />
+
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- Main Content Card -->
     <androidx.cardview.widget.CardView
         android:id="@+id/contentCard"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:cardCornerRadius="10dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/headerCard"
         app:layout_constraintBottom_toTopOf="@id/totalCardkonfirmasi"
         app:layout_constraintStart_toStartOf="parent"
@@ -136,106 +125,101 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="20dp">
 
-            <!-- Label Layanan Utama -->
             <TextView
                 android:id="@+id/labelLayananUtamaKonfimasi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/layananutama"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:textColor="#1A1A1A"
                 android:layout_marginBottom="12dp"
                 android:drawablePadding="8dp"
-                android:gravity="center_vertical" />
+                android:gravity="center_vertical"
+                android:text="@string/layananutama"
+                android:textColor="@color/light_blue_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-            <!-- Layanan Utama Container -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/rounded_background"
-                android:padding="12dp"
-                android:layout_marginBottom="20dp">
+                android:orientation="vertical"
+                android:padding="16dp">
 
-                <!-- Nama Layanan -->
                 <TextView
                     android:id="@+id/tvNamaLayananKonfimasi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
                     android:text="@string/namalayanan"
+                    android:textColor="@color/grey_text_dark"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="#1A1A1A"
-                    android:layout_marginBottom="4dp" />
+                    android:textStyle="bold" />
 
-                <!-- Harga -->
                 <TextView
                     android:id="@+id/tvHargaLayananKonfimasi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Harga"
-                    android:textSize="14sp"
-                    android:textColor="#019BDE"
+                    android:textColor="@color/light_blue_primary"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <!-- Label Layanan Tambahan -->
             <TextView
                 android:id="@+id/labelLayananTambahanKonfimasi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/layanantambahan"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:textColor="#1A1A1A"
                 android:layout_marginBottom="12dp"
                 android:drawablePadding="8dp"
-                android:gravity="center_vertical" />
+                android:gravity="center_vertical"
+                android:text="@string/layanantambahan"
+                android:textColor="@color/light_blue_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-            <!-- List Tambahan -->
             <ListView
                 android:id="@+id/listLayananTambahanKonfimasi"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:divider="@android:color/transparent"
-                android:dividerHeight="8dp"
-                android:scrollbars="vertical"
+                android:dividerHeight="12dp"
                 android:fadingEdge="vertical"
-                android:fadingEdgeLength="20dp" />
+                android:fadingEdgeLength="20dp"
+                android:scrollbars="vertical" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- Total Card -->
     <androidx.cardview.widget.CardView
         android:id="@+id/totalCardkonfirmasi"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="12dp"
-        app:cardBackgroundColor="#E8F5E8"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/light_blue_primary"
         app:layout_constraintBottom_toTopOf="@id/layoutButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="16dp">
 
-        <!-- Layout Total Bayar -->
         <LinearLayout
             android:id="@+id/layoutTotalBayarKonfimasi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:padding="16dp">
+            android:padding="20dp">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:src="@drawable/ic_duek"
-                android:layout_marginEnd="12dp"
-                app:tint="#2E7D32" />
+                android:layout_marginEnd="16dp"
+                app:tint="@color/green_status"
+                android:contentDescription="Total Icon" />
 
             <TextView
                 android:id="@+id/tvTotalLabel"
@@ -244,8 +228,8 @@
                 android:layout_weight="1"
                 android:text="@string/totalbayar"
                 android:textStyle="bold"
-                android:textSize="18sp"
-                android:textColor="#2E7D32" />
+                android:textSize="20sp"
+                android:textColor="@color/grey_text_dark" />
 
             <TextView
                 android:id="@+id/tvTotalHarga"
@@ -253,21 +237,27 @@
                 android:layout_height="wrap_content"
                 android:text="Rp 0"
                 android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="#1B5E20"
+                android:textSize="22sp"
+                android:textColor="@color/light_blue_dark"
                 android:background="@drawable/rounded_background"
-                android:backgroundTint="@android:color/white"
-                android:padding="8dp" />
+                android:backgroundTint="@color/white"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                app:cardCornerRadius="8dp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- Tombol Batal dan Pembayaran -->
     <LinearLayout
         android:id="@+id/layoutButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -275,27 +265,26 @@
         <Button
             android:id="@+id/btnBatal"
             android:layout_width="0dp"
-            android:layout_height="56dp"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:text="@string/batal"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:backgroundTint="#FF6B35"
+            android:backgroundTint="@color/blue_status"
             android:layout_marginEnd="8dp"
-            android:stateListAnimator="@null" />
+            app:cornerRadius="12dp" />
 
         <Button
             android:id="@+id/btnPembayaran"
             android:layout_width="0dp"
-            android:layout_height="56dp"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:text="@string/pembayaran"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:backgroundTint="#4CAF50"
+            android:backgroundTint="@color/blue_status"
             android:layout_marginStart="8dp"
-            android:stateListAnimator="@null" />
+            app:cornerRadius="12dp" />
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

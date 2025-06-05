@@ -4,126 +4,130 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".Tambah_Cabang_Activity"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Tambah_Cabang_Activity">
 
-        <TextView
-            android:id="@+id/tv_title_CABANG"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="TAMBAH CABANG"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tv_title_CABANG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="TAMBAH CABANG"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/grey_text_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_nama_CABANG"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:paddingStart="5dp"
-            android:layout_marginTop="16dp"
-            android:text="Nama Cabang"
-            android:textSize="17dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_title_CABANG" />
+    <TextView
+        android:id="@+id/tv_nama_CABANG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:text="Nama Cabang"
+        android:textSize="16sp"
+        android:textColor="@color/grey_text_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_CABANG" />
 
-        <EditText
-            android:id="@+id/et_nama_CABANG"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:paddingStart="15dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:textColor="@color/black"
-            android:background="@drawable/rounded"
-            android:hint="  Nama Lengkap"
-            android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_nama_CABANG" />
+    <EditText
+        android:id="@+id/et_nama_CABANG"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:textColor="@color/grey_text_dark"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Nama Lengkap Cabang"
+        android:textColorHint="@color/grey_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_nama_CABANG"
+        android:inputType="textCapWords" />
 
-        <TextView
-            android:id="@+id/tv_alamat_CABANG"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:textSize="17dp"
-            android:layout_marginTop="16dp"
-            android:text="Alamat"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_nama_CABANG" />
+    <TextView
+        android:id="@+id/tv_alamat_CABANG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        android:text="Alamat"
+        android:textColor="@color/grey_text_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_nama_CABANG" />
 
-        <EditText
-            android:id="@+id/et_alamat_CABANG"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:paddingStart="15dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:textColor="@color/black"
-            android:background="@drawable/rounded"
-            android:hint="  Alamat"
-            android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_alamat_CABANG" />
+    <EditText
+        android:id="@+id/et_alamat_CABANG"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:textColor="@color/grey_text_dark"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Alamat Lengkap Cabang"
+        android:textColorHint="@color/grey_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_alamat_CABANG"
+        android:inputType="textMultiLine" />
 
-        <TextView
-            android:id="@+id/tv_no_hp_CABANG"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:textSize="17dp"
-            android:layout_marginTop="16dp"
-            android:text="No HP Aktif"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_alamat_CABANG" />
+    <TextView
+        android:id="@+id/tv_no_hp_CABANG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        android:text="No HP Aktif"
+        android:textColor="@color/grey_text_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_alamat_CABANG" />
 
-        <EditText
-            android:id="@+id/et_no_hp_CABANG"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:paddingStart="15dp"
-            android:inputType="phone"
-            android:textColor="@color/black"
-            android:background="@drawable/rounded"
-            android:hint="  No HP Aktif"
-            android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_no_hp_CABANG" />
+    <EditText
+        android:id="@+id/et_no_hp_CABANG"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:inputType="phone"
+        android:textColor="@color/grey_text_dark"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Nomor HP Cabang"
+        android:textColorHint="@color/grey_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_no_hp_CABANG" />
 
-        <Button
-            android:id="@+id/btn_simpan_CABANG"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:text="Simpan"
-            android:textColor="@android:color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_no_hp_CABANG"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+    <Button
+        android:id="@+id/btn_simpan_CABANG"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:text="Simpan"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/blue_status"
+        app:cornerRadius="12dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_no_hp_CABANG"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

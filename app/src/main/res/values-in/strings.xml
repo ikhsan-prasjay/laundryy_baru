@@ -69,4 +69,8 @@
     <string name="PilihMetodePembayaran">Pilih Metode Pembayaran</string>
     <string name="bayarnanti">bayar nanti</string>
     <string name="cardTunai">Tunai</string>
+    <string name="card_pelanggan">pelanggan</string>
+    <string name="Card_laporan">laporan</string>
+    <string name="Card_transaksi">transaksi</string>
+    <string name="Transaksi">Transaksi</string>
 </resources>

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="24dp"
-    android:background="@color/very_light_blue_bg"> <TextView
+    android:background="@color/light_blue_primary"> <TextView
     android:id="@+id/tvJudulpembayaran"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/PilihMetodePembayaran"
-        android:textSize="17sp" android:textStyle="normal" android:textColor="@color/dark_grey"
+        android:textSize="17sp" android:textStyle="normal" android:textColor="@color/grey_text_dark"
         android:layout_marginTop="12dp"
         app:layout_constraintTop_toBottomOf="@id/tvJudulpembayaran"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/bayarnanti"
-            android:textColor="@color/soft_red"
+            android:textColor="@color/red_status"
             android:textStyle="bold"
             android:padding="16dp"
             android:textSize="16sp" />
@@ -80,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/cardTunai"
-                android:textColor="@color/medium_blue"
+                android:textColor="@color/blue_status"
                 android:textStyle="bold"
                 android:padding="16dp"
                 android:textSize="16sp" />
@@ -103,7 +103,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="QRIS"
-                android:textColor="@color/medium_blue"
+                android:textColor="@color/blue_status"
                 android:textStyle="bold"
                 android:padding="16dp"
                 android:textSize="16sp" />
@@ -126,7 +126,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="DANA"
-                android:textColor="@color/medium_blue"
+                android:textColor="@color/grey_medium"
                 android:textStyle="bold"
                 android:padding="16dp"
                 android:textSize="16sp" />
@@ -149,7 +149,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="GoPay"
-                android:textColor="@color/medium_blue"
+                android:textColor="@color/grey_medium"
                 android:textStyle="bold"
                 android:padding="16dp"
                 android:textSize="16sp" />
@@ -172,7 +172,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="OVO"
-                android:textColor="@color/medium_blue"
+                android:textColor="@color/blue_status"
                 android:textStyle="bold"
                 android:padding="16dp"
                 android:textSize="16sp" />
@@ -185,7 +185,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp" android:textSize="18sp"
         android:text="@string/batal"
-        android:textColor="@color/dark_grey"
+        android:textColor="@color/grey_text_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Layoupembayarant" />

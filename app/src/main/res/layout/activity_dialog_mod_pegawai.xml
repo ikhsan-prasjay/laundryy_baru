@@ -1,178 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="16dp"
+    android:layout_margin="24dp"
     card_view:cardCornerRadius="16dp"
     card_view:cardElevation="8dp"
-    android:backgroundTint="@android:color/white">
+    android:backgroundTint="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp">
+        android:orientation="vertical">
 
-        <!-- Judul -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/detailpegawai"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:textColor="#333333"
-            android:paddingBottom="12dp" />
-
-        <!-- Fungsi reusable baris data -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingVertical="6dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="ID Pegawai"
-                android:textColor="#666" />
-
-            <TextView
-                android:id="@+id/tvDIALOG_PEGAWAI_ID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="P001284"
-                android:textStyle="bold"
-                android:textColor="#000000" />
-        </LinearLayout>
-
-        <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="#DDD" />
+            android:textColor="@color/light_blue_primary"
+            android:paddingBottom="12dp"
+            android:paddingTop="16dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:gravity="center_horizontal"
+            android:background="@color/light_blue_dark" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingVertical="6dp">
+            android:orientation="vertical"
+            android:padding="20dp">
 
-            <TextView
-                android:layout_width="0dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/namapegawai"
-                android:textColor="#666" />
+                android:orientation="horizontal"
+                android:paddingVertical="8dp">
 
-            <TextView
-                android:id="@+id/tvDIALOG_PEGAWAI_NAMA"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ID Pegawai"
+                    android:textColor="@color/grey_text_dark"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvDIALOG_PEGAWAI_ID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="P001284"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey_text_dark"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/grey_light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Budi Santoso"
-                android:textStyle="bold"
-                android:textColor="#1976D2" />
+                android:orientation="horizontal"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/namapegawai"
+                    android:textColor="@color/grey_text_dark"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvDIALOG_PEGAWAI_NAMA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Budi Santoso"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey_text_dark"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/grey_light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/etcard_alamat"
+                    android:textColor="@color/grey_text_dark"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvDIALOG_PEGAWAI_ALAMAT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Jl. Mawar No. 45, Jakarta"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey_text_dark"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/grey_light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/etcard_nohp"
+                    android:textColor="@color/grey_text_dark"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvDIALOG_PEGAWAI_NOHP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="0812-3456-7890"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey_text_dark"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/grey_light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/card_cabang"
+                    android:textColor="@color/grey_text_dark"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvDIALOG_PEGAWAICABANG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Cabang Jakarta"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey_text_dark"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="24dp"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/btDIALOG_MOD_PEGAWAI_Edit"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="Sunting"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/blue_status"
+                    card_view:cornerRadius="12dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/btDIALOG_MOD_PEGAWAI_Hapus"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/red_status"
+                    android:text="@string/Hapus"
+                    android:textColor="@color/white"
+                    card_view:cornerRadius="12dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
         </LinearLayout>
-
-        <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="#DDD" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingVertical="6dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/etcard_alamat"
-                android:textColor="#666" />
-
-            <TextView
-                android:id="@+id/tvDIALOG_PEGAWAI_ALAMAT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Jl. Mawar No. 45, Jakarta"
-                android:textStyle="bold"
-                android:textColor="#000000" />
-        </LinearLayout>
-
-        <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="#DDD" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingVertical="6dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/etcard_nohp"
-                android:textColor="#666" />
-
-            <TextView
-                android:id="@+id/tvDIALOG_PEGAWAI_NOHP"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0812-3456-7890"
-                android:textStyle="bold"
-                android:textColor="#000000" />
-        </LinearLayout>
-
-        <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="#DDD" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingVertical="6dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/card_cabang"
-                android:textColor="#666" />
-
-            <TextView
-                android:id="@+id/tvDIALOG_PEGAWAICABANG"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cabang Jakarta"
-                android:textStyle="bold"
-                android:textColor="#000000" />
-        </LinearLayout>
-
-        <!-- Tombol Aksi -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="16dp"
-            android:weightSum="2">
-
-            <Button
-                android:id="@+id/btDIALOG_MOD_PEGAWAI_Edit"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginEnd="8dp"
-                android:text="Sunting"
-                android:textColor="#FFF"
-                android:backgroundTint="#0288D1" />
-
-            <Button
-                android:id="@+id/btDIALOG_MOD_PEGAWAI_Hapus"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_weight="1"
-                android:backgroundTint="#D32F2F"
-                android:text="@string/Hapus"
-                android:textColor="#FFF" />
-        </LinearLayout>
-
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

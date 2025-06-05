@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:text="Nama Layanan"
                 android:textSize="15sp"
-                android:textColor="@color/grey_dark"
+                android:textColor="@color/grey_text_dark"
                 android:layout_marginBottom="4dp"/>
 
             <TextView
@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:text="Harga"
                 android:textSize="15sp"
-                android:textColor="@color/grey_dark"
+                android:textColor="@color/grey_text_dark"
                 android:layout_marginBottom="2dp"/>
 
             <TextView
@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:text="Nama Cabang"
                 android:textSize="15sp"
-                android:textColor="@color/grey_dark"
+                android:textColor="@color/grey_text_dark"
                 android:layout_marginBottom="2dp"/>
         </LinearLayout>
     </LinearLayout>

@@ -1,12 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    card_view:cardCornerRadius="8dp"
+    card_view:cardCornerRadius="12dp"
     card_view:cardElevation="4dp"
     android:id="@+id/card_pilih_pelanggan"
-    android:layout_margin="20dp">
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    card_view:cardBackgroundColor="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,17 +18,17 @@
         android:orientation="vertical">
 
         <TextView
-
             android:id="@+id/ID_pilih_pelanggan"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="#9EB8AB"
+            android:layout_height="48dp"
+            android:background="@color/orange_primary"
             android:gravity="center_vertical"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
-            android:text="@string/card_data_pelanggan"
-            android:textColor="#212121"
-            android:textSize="16sp" />
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            tools:text="ID Pelanggan: P001"
+            android:textColor="@color/grey_text_dark"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,27 +40,29 @@
                 android:id="@+id/tvCARD_Pilih_PELANGGAN_nama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/NAMA_Pelanggan"
-                android:textSize="14sp"
-                android:layout_marginBottom="4dp"/>
+                tools:text="Nama Pelanggan: John Doe"
+                android:textColor="@color/grey_text_dark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp"/>
 
             <TextView
                 android:id="@+id/tvCARD_PIlih_PELANGGAN_alamat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Mamat"
+                tools:text="Alamat: Jl. Contoh No. 123"
+                android:textColor="@color/grey_text_dark"
                 android:textSize="14sp"
-                android:layout_marginBottom="2dp"/>
+                android:layout_marginBottom="4dp"/>
 
             <TextView
                 android:id="@+id/tvCARD_Pilih_PELANGGAN_nohp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/nomer"
+                tools:text="No HP: 08123456789"
+                android:textColor="@color/grey_text_dark"
                 android:textSize="14sp"
                 android:layout_marginBottom="2dp"/>
-
-
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -69,4 +69,8 @@
     <string name="PilihMetodePembayaran">Select Payment Method</string>
     <string name="bayarnanti">pay later</string>
     <string name="cardTunai">Cash</string>
+    <string name="card_pelanggan">customer</string>
+    <string name="Card_laporan">report</string>
+    <string name="Card_transaksi">transaction</string>
+    <string name="Transaksi">transaction</string>
 </resources>

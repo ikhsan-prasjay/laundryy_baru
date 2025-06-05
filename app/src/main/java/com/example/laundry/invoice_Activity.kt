@@ -131,7 +131,7 @@ class invoice_Activity : AppCompatActivity() {
     // Mengatur data ke View yang sudah diinisialisasi
     @SuppressLint("SetTextI18n")
     private fun setupInvoiceData() {
-        tvBusinessName.text = "Mahsok Laundry"
+        tvBusinessName.text = "Laundry"
         tvBranch.text = "Solo"
         tvTransactionId.text = noTransaksi
         tvDate.text = tanggalTransaksi
@@ -197,7 +197,7 @@ class invoice_Activity : AppCompatActivity() {
         val message = """
             Halo $namaPelanggan 👋,
 
-            🔖 *MAHSOK LAUNDRY - SOLO*
+            🔖 * LAUNDRY - SOLO*
 
             🆔 *ID Transaksi:* $noTransaksi
             📅 *Tanggal:* $tanggalTransaksi
@@ -209,7 +209,7 @@ class invoice_Activity : AppCompatActivity() {
             🙏 Terima kasih telah mempercayakan cucian Anda kepada kami.
             Kami akan memberikan pelayanan terbaik untuk Anda!
 
-            📍 Mahsok Laundry - Cabang Solo
+            📍  Laundry - Cabang Solo
         """.trimIndent()
 
         val phoneNumber = if (nomorHp.startsWith("0")) "62${nomorHp.substring(1)}" else nomorHp
