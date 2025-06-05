@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="24dp"
-    android:background="@drawable/rounded_background_dialog"
     tools:context=".Dialog_mod_pelanggan">
 
     <androidx.cardview.widget.CardView
@@ -28,13 +27,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/light_blue_dark"
-                android:paddingVertical="12dp"
+                android:gravity="center"
                 android:paddingHorizontal="20dp"
+                android:paddingVertical="12dp"
                 android:text="@string/detailpelanggan"
-                android:textColor="@color/light_blue_primary"
+                android:textColor="#37474F"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"

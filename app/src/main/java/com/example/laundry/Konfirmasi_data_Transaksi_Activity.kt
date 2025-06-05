@@ -50,9 +50,9 @@ class Konfirmasi_data_Transaksi_Activity : AppCompatActivity() {
     }
 
     private fun initViews() {
-        // Explicitly cast to TextView to match the variable type
-        tvNamaPelanggan = findViewById(R.id.tvNamaPelangganKonfirmasi)
-        tvNoHP = findViewById(R.id.tvNoHPKonfimasi)
+        // PERBAIKAN DI SINI: Menggunakan ID baru untuk TextView nilai
+        tvNamaPelanggan = findViewById(R.id.tvNamaPelangganValue) //
+        tvNoHP = findViewById(R.id.tvNoHPValue) //
         tvNamaLayanan = findViewById(R.id.tvNamaLayananKonfimasi)
         tvHargaLayanan = findViewById(R.id.tvHargaLayananKonfimasi)
         listLayananTambahan = findViewById(R.id.listLayananTambahanKonfimasi)
