@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.laundry.R
 import com.example.laundry.Data_model.ModelTambahan
 import java.io.Serializable
-import java.text.NumberFormat // Import untuk format mata uang
-import java.util.* // Import untuk Locale
+import java.text.NumberFormat
+import java.util.*
 
 class Konfirmasi_data_Transaksi_Activity : AppCompatActivity() {
 
@@ -37,10 +37,12 @@ class Konfirmasi_data_Transaksi_Activity : AppCompatActivity() {
         val namaPelanggan = intent.getStringExtra("nama_pelanggan") ?: ""
         val nomorHp = intent.getStringExtra("nomor_hp") ?: ""
         val namaLayanan = intent.getStringExtra("nama_layanan") ?: ""
-        val hargaLayanan = intent.getStringExtra("harga_layanan") ?: "0" // Harga layanan utama (String)
+        // Harga layanan utama (String) - Pastikan ini juga dibersihkan jika mungkin ada format "X.XXX"
+        val hargaLayananString = intent.getStringExtra("harga_layanan") ?: "0"
+        val hargaLayananBersih = hargaLayananString.replace(".", "").replace(",", "")
+        val hargaLayananInt = hargaLayananBersih.toIntOrNull() ?: 0
 
         // Safely retrieve the ArrayList with proper casting
-        // First, retrieve the serializable extra
         val serializableExtra = intent.getSerializableExtra("layanan_tambahan")
 
         // Then try to cast it safely
@@ -48,7 +50,6 @@ class Konfirmasi_data_Transaksi_Activity : AppCompatActivity() {
         tambahanList = try {
             serializableExtra as? ArrayList<ModelTambahan> ?: ArrayList()
         } catch (e: Exception) {
-            // If casting fails, log the error and use an empty list
             e.printStackTrace()
             ArrayList()
         }
@@ -58,14 +59,16 @@ class Konfirmasi_data_Transaksi_Activity : AppCompatActivity() {
         tvNoHP.text = nomorHp
         tvNamaLayanan.text = namaLayanan
         // Gunakan formatCurrency untuk harga layanan utama
-        tvHargaLayanan.text = formatCurrency(hargaLayanan.toIntOrNull() ?: 0)
+        tvHargaLayanan.text = formatCurrency(hargaLayananInt)
 
         // Create a list of formatted strings for the ListView
         val tambahanStrings = ArrayList<String>()
         for (tambahan in tambahanList) {
             val nama = tambahan.namaTambahan ?: "Unknown"
-            val harga = tambahan.hargaTambahan?.toIntOrNull() ?: 0
-            // Gunakan formatCurrency untuk harga tambahan
+            // --- Perbaikan di sini: Bersihkan string harga sebelum konversi ---
+            val cleanedHargaString = tambahan.hargaTambahan?.replace(".", "")?.replace(",", "")
+            val harga = cleanedHargaString?.toIntOrNull() ?: 0
+            // --- Akhir perbaikan ---
             tambahanStrings.add("$nama - ${formatCurrency(harga)}")
         }
 
@@ -79,9 +82,12 @@ class Konfirmasi_data_Transaksi_Activity : AppCompatActivity() {
 
         // Calculate total price safely
         try {
-            totalHarga = hargaLayanan.toIntOrNull() ?: 0
+            totalHarga = hargaLayananInt // Sudah dibersihkan dan dikonversi di atas
             for (tambahan in tambahanList) {
-                val hargaTambahan = tambahan.hargaTambahan?.toIntOrNull() ?: 0
+                // --- Perbaikan di sini: Bersihkan string harga sebelum konversi untuk perhitungan total ---
+                val cleanedHargaTambahanString = tambahan.hargaTambahan?.replace(".", "")?.replace(",", "")
+                val hargaTambahan = cleanedHargaTambahanString?.toIntOrNull() ?: 0
+                // --- Akhir perbaikan ---
                 totalHarga += hargaTambahan
             }
         } catch (e: Exception) {
@@ -127,7 +133,7 @@ class Konfirmasi_data_Transaksi_Activity : AppCompatActivity() {
                     invoiceIntent.putExtra("nama_pelanggan", namaPelanggan)
                     invoiceIntent.putExtra("nomor_hp", nomorHp)
                     invoiceIntent.putExtra("nama_layanan", namaLayanan)
-                    invoiceIntent.putExtra("harga_layanan", hargaLayanan) // Kirim harga asli (String)
+                    invoiceIntent.putExtra("harga_layanan", hargaLayananString) // Kirim harga asli (String)
                     invoiceIntent.putExtra("total_harga", totalHarga) // Kirim total yang sudah dihitung (Int)
                     invoiceIntent.putExtra("metode_pembayaran", namaMetode)
                     invoiceIntent.putExtra("layanan_tambahan", tambahanList as Serializable)

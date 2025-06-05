@@ -64,9 +64,10 @@ class Data_Transaksi_Activity : AppCompatActivity() {
         initViews()
 
         // Initialize the adapter for rvLayananTambahan
+        // Menggunakan ArrayList(dataList) untuk memastikan tipe yang benar saat inisialisasi
         additionalServiceAdapter = AdapterPilihTambahan(ArrayList(dataList)) { item, isSelected ->
-            // This lambda is for when items are selected/deselected in Pilih_Layanan_Tambahan_Activity
-            // We don't need to do anything here because we handle the return list from that activity
+            // Logika ini akan dipicu ketika item dipilih/dibatalkan di AdapterPilihTambahan
+            // Namun, pada Activity ini, kita akan memperbarui seluruh list saat kembali dari PilihLayananTambahanActivity
         }
         rvLayananTambahan.adapter = additionalServiceAdapter
         rvLayananTambahan.layoutManager = LinearLayoutManager(this).apply {
@@ -85,7 +86,7 @@ class Data_Transaksi_Activity : AppCompatActivity() {
         }
 
         fabTambahan.setOnClickListener { // Changed to fabTambahan
-            val intent = Intent(this, Pilih_Tambahan_Activity::class.java)
+            val intent = Intent(this, PilihLayananTambahanActivity::class.java)
             // Pass the currently selected additional services to the selection activity
             intent.putExtra("previously_selected_tambahan", ArrayList(dataList) as Serializable)
             startActivityForResult(intent, pilihLayananTambahan)
@@ -93,8 +94,7 @@ class Data_Transaksi_Activity : AppCompatActivity() {
 
         btnProses.setOnClickListener {
             if (validateData()) {
-                val intent = Intent(this@Data_Transaksi_Activity,
-                    Konfirmasi_data_Transaksi_Activity::class.java)
+                val intent = Intent(this@Data_Transaksi_Activity, Konfirmasi_data_Transaksi_Activity::class.java)
                 intent.putExtra("nama_pelanggan", namaPelanggan)
                 intent.putExtra("nomor_hp", noHP)
                 intent.putExtra("nama_layanan", namaLayanan)
@@ -166,13 +166,13 @@ class Data_Transaksi_Activity : AppCompatActivity() {
                 }
 
                 pilihLayananTambahan -> {
-                    // Directly get the list of selected additional services
+                    // Directly get the list of selected additional services, yang sudah pasti ArrayList
                     val selectedList = data.getSerializableExtra("selected_tambahan_list") as? ArrayList<ModelTambahan>
                     selectedList?.let {
                         dataList.clear()
                         dataList.addAll(it)
-                        additionalServiceAdapter.setSelectedItems(dataList) // Update adapter's selected items
-                        additionalServiceAdapter.notifyDataSetChanged() // Notify adapter of data change
+                        // Perbarui data adapter menggunakan metode updateData yang sudah ada
+                        additionalServiceAdapter.updateData(it) // Menggunakan 'it' yang sudah pasti ArrayList
                     }
                 }
             }

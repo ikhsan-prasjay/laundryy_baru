@@ -72,6 +72,8 @@ class Pilih_pelanggan_Activity : AppCompatActivity() {
         })
     }
 
+    // Contoh untuk Pilih_pelanggan_Activity.kt (lakukan hal serupa untuk PilihLayananActivity.kt)
+// ...
     private fun filterList(query: String?) {
         Log.d(TAG, "Filtering list with query: $query")
         filteredList.clear()
@@ -79,18 +81,18 @@ class Pilih_pelanggan_Activity : AppCompatActivity() {
         if (query.isNullOrEmpty()) {
             filteredList.addAll(listPelanggan)
         } else {
-            val searchText = query.toLowerCase().trim()
+            val searchText = query.lowercase().trim() // Perbaikan di sini
             for (pelanggan in listPelanggan) {
-                if (pelanggan.namaPelanggan?.toLowerCase()?.contains(searchText) == true ||
-                    pelanggan.alamatPelanggan?.toLowerCase()?.contains(searchText) == true ||
-                    pelanggan.noHPPelanggan?.toLowerCase()?.contains(searchText) == true) {
+                if (pelanggan.namaPelanggan?.lowercase()?.contains(searchText) == true || // Perbaikan di sini
+                    pelanggan.alamatPelanggan?.lowercase()?.contains(searchText) == true || // Perbaikan di sini
+                    pelanggan.noHPPelanggan?.lowercase()?.contains(searchText) == true) { // Perbaikan di sini
                     filteredList.add(pelanggan)
                 }
             }
         }
-
         updateRecyclerView()
     }
+// ...
 
     private fun updateRecyclerView() {
         Log.d(TAG, "Updating RecyclerView with ${filteredList.size} items")

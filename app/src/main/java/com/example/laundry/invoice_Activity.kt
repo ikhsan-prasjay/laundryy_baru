@@ -40,7 +40,7 @@ class invoice_Activity : AppCompatActivity() {
     private lateinit var tvMainService: TextView
     private lateinit var tvMainServicePrice: TextView
     private lateinit var tvAdditionalServicesHeader: TextView
-    private lateinit var rvAdditionalServices: RecyclerView // Pastikan ini RecyclerView
+    private lateinit var rvAdditionalServices: RecyclerView
     private lateinit var tvSubtotalAdditional: TextView
     private lateinit var tvTotal: TextView
     private lateinit var btnWhatsapp: Button
@@ -50,7 +50,7 @@ class invoice_Activity : AppCompatActivity() {
     private var namaPelanggan: String = ""
     private var nomorHp: String = ""
     private var namaLayanan: String = ""
-    private var hargaLayanan: String = "0"
+    private var hargaLayanan: String = "0" // Harga layanan utama (String)
     private var totalHarga: Int = 0
     private var tambahanList: ArrayList<ModelTambahan> = ArrayList() // List untuk layanan tambahan
     private var noTransaksi: String = ""
@@ -99,7 +99,7 @@ class invoice_Activity : AppCompatActivity() {
         tvMainService = findViewById(R.id.tv_main_service)
         tvMainServicePrice = findViewById(R.id.tv_main_service_price)
         tvAdditionalServicesHeader = findViewById(R.id.tv_additional_services_header)
-        rvAdditionalServices = findViewById(R.id.rv_additional_services) // Penting: Pastikan ID ini merujuk ke RecyclerView di XML
+        rvAdditionalServices = findViewById(R.id.rv_additional_services)
         tvSubtotalAdditional = findViewById(R.id.tv_subtotal_additional)
         tvTotal = findViewById(R.id.tv_total)
         btnWhatsapp = findViewById(R.id.btn_whatsapp)
@@ -137,8 +137,14 @@ class invoice_Activity : AppCompatActivity() {
         tvDate.text = tanggalTransaksi
         tvCustomer.text = namaPelanggan
         tvEmployee.text = "Admin" // Atau ambil dari Intent jika ada data karyawan
+
+        // --- Perbaikan di sini: Bersihkan string harga layanan utama sebelum konversi ---
+        val cleanedHargaLayanan = hargaLayanan.replace(".", "").replace(",", "")
+        val hargaLayananInt = cleanedHargaLayanan.toIntOrNull() ?: 0
+        // --- Akhir perbaikan ---
+
         tvMainService.text = namaLayanan
-        tvMainServicePrice.text = formatCurrency(hargaLayanan.toIntOrNull() ?: 0)
+        tvMainServicePrice.text = formatCurrency(hargaLayananInt)
         setupAdditionalServices() // Mengatur RecyclerView untuk layanan tambahan
         tvTotal.text = formatCurrency(totalHarga)
     }
@@ -161,7 +167,10 @@ class invoice_Activity : AppCompatActivity() {
 
         // Menghitung subtotal dari layanan tambahan
         val subtotal = tambahanList.sumOf {
-            it.hargaTambahan?.toIntOrNull() ?: 0
+            // --- Perbaikan di sini: Bersihkan string harga tambahan sebelum konversi ---
+            val cleanedHargaTambahan = it.hargaTambahan?.replace(".", "")?.replace(",", "")
+            cleanedHargaTambahan?.toIntOrNull() ?: 0
+            // --- Akhir perbaikan ---
         }
         tvSubtotalAdditional.text = formatCurrency(subtotal)
     }
@@ -332,6 +341,11 @@ class invoice_Activity : AppCompatActivity() {
         val BOLD_OFF = "${ESC}E\u0000"
         val CUT = "${ESC}i"
 
+        // --- Perbaikan di sini: Bersihkan string harga layanan utama untuk cetak ---
+        val cleanedHargaLayananForPrint = hargaLayanan.replace(".", "").replace(",", "")
+        val hargaLayananIntForPrint = cleanedHargaLayananForPrint.toIntOrNull() ?: 0
+        // --- Akhir perbaikan ---
+
         return buildString {
             append(INIT)
             append(CENTER).append(BOLD_ON).append("LAUNDRY\n")
@@ -345,12 +359,15 @@ class invoice_Activity : AppCompatActivity() {
             append("--------------------------------\n")
             append(BOLD_ON).append("LAYANAN UTAMA:\n").append(BOLD_OFF)
             append("$namaLayanan\n")
-            append("${formatCurrency(hargaLayanan.toIntOrNull() ?: 0)}\n")
+            append("${formatCurrency(hargaLayananIntForPrint)}\n") // Menggunakan harga yang sudah dibersihkan
             append("--------------------------------\n")
             if (tambahanList.isNotEmpty()) {
                 append(BOLD_ON).append("LAYANAN TAMBAHAN:\n").append(BOLD_OFF)
                 tambahanList.forEachIndexed { index, tambahan ->
-                    val harga = tambahan.hargaTambahan?.toIntOrNull() ?: 0
+                    // --- Perbaikan di sini: Bersihkan string harga tambahan untuk cetak ---
+                    val cleanedHargaTambahanForPrint = tambahan.hargaTambahan?.replace(".", "")?.replace(",", "")
+                    val harga = cleanedHargaTambahanForPrint?.toIntOrNull() ?: 0
+                    // --- Akhir perbaikan ---
                     append("${index + 1}. ${tambahan.namaTambahan}\n")
                     append("   ${formatCurrency(harga)}\n")
                 }
@@ -405,7 +422,11 @@ class invoice_Activity : AppCompatActivity() {
             val service = additionalServices[position]
             holder.tvNumber.text = (position + 1).toString()
             holder.tvServiceName.text = service.namaTambahan ?: "Unknown"
-            holder.tvServicePrice.text = formatCurrency(service.hargaTambahan?.toIntOrNull() ?: 0)
+            // --- Perbaikan di sini: Bersihkan string harga tambahan untuk tampilan RecyclerView ---
+            val cleanedServicePrice = service.hargaTambahan?.replace(".", "")?.replace(",", "")
+            val harga = cleanedServicePrice?.toIntOrNull() ?: 0
+            // --- Akhir perbaikan ---
+            holder.tvServicePrice.text = formatCurrency(harga)
         }
 
         override fun getItemCount(): Int = additionalServices.size

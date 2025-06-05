@@ -14,19 +14,37 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Header -->
-        <TextView
-            android:id="@+id/tvCARD_PILIHTAMBAHAN_ID"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:background="#9900BF"
             android:gravity="center_vertical"
-            android:paddingStart="12dp"
-            android:text="1"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+            android:orientation="horizontal">
 
-        <!-- Content -->
+            <TextView
+                android:id="@+id/tvCARD_PILIHTAMBAHAN_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="12dp"
+                android:text="1"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <CheckBox
+                android:id="@+id/checkBox_pilih_tambahan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:buttonTint="#FFFFFF"
+                android:minWidth="0dp"
+                android:minHeight="0dp" />
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -48,18 +66,6 @@
                 android:layout_marginTop="5dp"
                 android:text="Harga : Rp. 6.000" />
         </LinearLayout>
-
-        <ImageButton
-            android:id="@+id/btnDelete"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="300dp"
-            android:layout_marginTop="-52dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Hapus"
-            android:src="@android:drawable/ic_menu_delete"
-            android:visibility="gone" /> <!-- default disembunyikan -->
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

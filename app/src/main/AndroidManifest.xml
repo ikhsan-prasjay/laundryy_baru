@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -22,9 +25,6 @@
             android:exported="false" />
         <activity
             android:name=".Data_Transaksi_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".Pilih_Tambahan_Activity"
             android:exported="false" />
         <activity
             android:name=".Pilih_pelanggan_Activity"
@@ -75,9 +75,6 @@
             android:name=".Data_Pegawai_Activity"
             android:exported="false" />
         <activity
-            android:name=".transaksi.DataActivity"
-            android:exported="false" />
-        <activity
             android:name=".Tambah_PegawaiActivity2"
             android:exported="false" />
         <activity
@@ -87,5 +84,4 @@
             android:name=".Pelanggan.DataPelangganActivity"
             android:exported="false" />
     </application>
-
 </manifest>

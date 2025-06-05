@@ -47,9 +47,9 @@ class Tambah_TambahanActivity : AppCompatActivity() {
     }
 
     fun cekValidasi() {
-        val nama = etNama.text.toString()
-        val alamat = etHarga.text.toString()
-        val cabang = etCabang.text.toString()
+        val nama = etNama.text.toString().trim()
+        val harga = etHarga.text.toString().trim()
+        val cabang = etCabang.text.toString().trim()
 
         if (nama.isEmpty()) {
             etNama.error = this.getString(R.string.validasi_nama_tambahan)
@@ -57,9 +57,10 @@ class Tambah_TambahanActivity : AppCompatActivity() {
             etNama.requestFocus()
             return
         }
-        if (alamat.isEmpty()) {
-            etHarga.error = this.getString(R.string.validasi_alamat_tambahan)
-            Toast.makeText(this, this.getString(R.string.validasi_alamat_tambahan), Toast.LENGTH_SHORT).show()
+        // Perbaikan: Validasi harga harus numerik dan tidak kosong
+        if (harga.isEmpty() || harga.toIntOrNull() == null) {
+            etHarga.error = "Harga layanan tambahan tidak valid" // Pesan error yang lebih spesifik
+            Toast.makeText(this, "Harga layanan tambahan harus berupa angka", Toast.LENGTH_SHORT).show()
             etHarga.requestFocus()
             return
         }
@@ -72,30 +73,26 @@ class Tambah_TambahanActivity : AppCompatActivity() {
         simpan()
     }
 
+    // Di dalam fungsi simpan() pada Tambah_TambahanActivity.kt
     fun simpan() {
         val tambahanBaru = myRef.push()
         val tambahanid = tambahanBaru.key
+
+        // Bersihkan string harga sebelum disimpan ke Firebase
+        val cleanedHargaToSave = etHarga.text.toString().trim().replace(".", "").replace(",", "")
+
         val data = ModelTambahan(
             tambahanid.toString(),
-            etNama.text.toString(),
-            etHarga.text.toString(),
-            etCabang.text.toString(),
+            etNama.text.toString().trim(),
+            cleanedHargaToSave, // Simpan harga yang sudah dibersihkan
+            etCabang.text.toString().trim(),
         )
         tambahanBaru.setValue(data)
             .addOnSuccessListener {
-                Toast.makeText(
-                    this,
-                    this.getString(R.string.tambah_tambahan_sukses),
-                    Toast.LENGTH_SHORT
-                )
-                finish()
+                // ...
             }
             .addOnFailureListener {
-                Toast.makeText(
-                    this,
-                    this.getString(R.string.tambah_tambahan_gagal),
-                    Toast.LENGTH_SHORT
-                )
+                // ...
             }
     }
 }
