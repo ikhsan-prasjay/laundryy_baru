@@ -75,8 +75,7 @@
                 android:layout_height="56dp"
                 android:src="@drawable/ic_duek"
                 android:layout_marginEnd="16dp"
-                android:contentDescription="Service Icon"
-                app:tint="@color/white" />
+                android:contentDescription="Service Icon"/>
 
             <LinearLayout
                 android:layout_width="0dp"

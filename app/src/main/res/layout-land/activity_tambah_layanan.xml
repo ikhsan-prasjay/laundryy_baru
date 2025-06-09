@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.ega.laundry.layanan.TambahLayananActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/tvtambahkan_layanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/tambah_layanan"
+            android:gravity="center"
+            android:textColor="@color/grey_medium"
+            android:textSize="28sp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/namalengkaplayanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/namalayanan"
+            android:textColor="@color/grey_text_dark"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etnama_lengkaplayanan"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="Nama Layanan"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/grey_text_dark"
+            android:textColorHint="@color/grey_medium"
+            android:inputType="textCapWords" />
+
+        <TextView
+            android:id="@+id/hargalayanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/harga"
+            android:textColor="@color/grey_text_dark"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/ethargalayanan"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="Harga Layanan"
+            android:maxLength="14"
+            android:inputType="numberDecimal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/grey_text_dark"
+            android:textColorHint="@color/grey_medium" />
+
+        <TextView
+            android:id="@+id/cabanglayanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/cabang"
+            android:textColor="@color/grey_text_dark"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etcabanglayanan"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginTop="8dp"
+            android:hint="Cabang Layanan"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/grey_text_dark"
+            android:textColorHint="@color/grey_medium"
+            android:inputType="textCapWords" />
+
+        <Button
+            android:id="@+id/btsimpanlayanan"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/button_simpan"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/blue_status"
+            app:cornerRadius="12dp"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>

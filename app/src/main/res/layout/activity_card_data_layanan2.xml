@@ -22,8 +22,8 @@
             android:gravity="center_vertical"
             android:paddingStart="15dp"
             android:paddingEnd="15dp"
-            android:text="ID Layanan"
-            android:textColor="@color/white"
+            android:text="@string/Idlayanan"
+            android:textColor="#000000"
             android:textSize="16sp" />
 
         <LinearLayout
@@ -36,7 +36,7 @@
                 android:id="@+id/tvCARD_LAYANAN_nama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nama Layanan"
+                android:text="@string/Nama_Layanan"
                 android:textSize="15sp"
                 android:textColor="@color/grey_text_dark"
                 android:layout_marginBottom="4dp"/>
@@ -45,7 +45,7 @@
                 android:id="@+id/tvCARD_LAYANAN_harga"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Harga"
+                android:text="@string/harga"
                 android:textSize="15sp"
                 android:textColor="@color/grey_text_dark"
                 android:layout_marginBottom="2dp"/>
@@ -54,7 +54,7 @@
                 android:id="@+id/tvCARD_LAYANAN_cabang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nama Cabang"
+                android:text="@string/Nama_Cabang"
                 android:textSize="15sp"
                 android:textColor="@color/grey_text_dark"
                 android:layout_marginBottom="2dp"/>

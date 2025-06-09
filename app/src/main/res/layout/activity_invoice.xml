@@ -65,7 +65,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ID Transaksi: "
+                        android:text="@string/ID_Transaksi"
                         android:textColor="@color/grey_text_dark"
                         android:textStyle="bold" />
                     <TextView
@@ -84,7 +84,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Tanggal: "
+                        android:text="@string/Tanggal"
                         android:textColor="@color/grey_text_dark"
                         android:textStyle="bold" />
                     <TextView
@@ -103,7 +103,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pelanggan: "
+                        android:text="@string/card_pelanggan"
                         android:textColor="@color/grey_text_dark"
                         android:textStyle="bold" />
                     <TextView
@@ -122,7 +122,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Kasir: "
+                        android:text="@string/Kasir"
                         android:textColor="@color/grey_text_dark"
                         android:textStyle="bold" />
                     <TextView
@@ -144,7 +144,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:text="LAYANAN UTAMA:"
+                    android:text="@string/LAYANAN_UTAMA"
                     android:textColor="@color/light_blue_dark"
                     android:layout_marginBottom="8dp" />
 
@@ -186,7 +186,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:text="LAYANAN TAMBAHAN:"
+                    android:text="@string/LAYANAN_TAMBAHAN"
                     android:textColor="@color/light_blue_dark"
                     android:layout_marginBottom="8dp" />
 
@@ -210,7 +210,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1.5"
-                        android:text="Subtotal Tambahan: "
+                        android:text="@string/Subtotal_Tambahan"
                         android:textSize="16sp"
                         android:textColor="@color/grey_text_dark" />
                     <TextView
@@ -243,7 +243,7 @@
                         android:layout_weight="1.5"
                         android:textStyle="bold"
                         android:textSize="22sp"
-                        android:text="TOTAL: "
+                        android:text="@string/totalbayar"
                         android:textColor="@color/light_blue_dark" />
                     <TextView
                         android:id="@+id/tv_total"
@@ -260,7 +260,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Terima kasih atas kepercayaan Anda kepada kami!"
+                    android:text="@string/Terima_kasih_atas_kepercayaan_Anda_kepada_kami"
                     android:layout_gravity="center_horizontal"
                     android:gravity="center"
                     android:textColor="@color/grey_text_dark"
@@ -270,7 +270,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Hormat kami,\nLaundry Modern"
+                    android:text="@string/Hormat_kami_Laundry_Modern"
                     android:layout_gravity="center_horizontal"
                     android:gravity="center"
                     android:textColor="@color/blue_status"
@@ -296,7 +296,7 @@
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="Bagikan via WhatsApp"
+            android:text="@string/Bagikan_via_WhatsApp"
             android:layout_marginEnd="8dp"
             android:backgroundTint="#25D366"
             android:textColor="@android:color/white"
@@ -308,7 +308,7 @@
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="Cetak Struk"
+            android:text="@string/Cetak_Struk"
             android:layout_marginStart="8dp"
             android:backgroundTint="@color/blue_status"
             android:textColor="@android:color/white"

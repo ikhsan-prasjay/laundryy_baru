@@ -25,20 +25,11 @@
             android:gravity="center_vertical"
             android:paddingStart="20dp"
             android:paddingEnd="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ID Pegawai        :"
-                android:textSize="16sp"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
-
             <TextView
                 android:id="@+id/tvCARD_PEGAWAI_ID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="E001"
+                tools:text="@string/ID_pegawai"
                 android:textSize="16sp"
                 android:textColor="@color/white"
                 android:textStyle="bold"
@@ -60,7 +51,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nama Pegawai :"
+                    android:text="@string/namapegawai"
                     android:textSize="15sp"
                     android:textColor="@color/grey_text_dark" />
 
@@ -84,7 +75,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Alamat               :"
+                    android:text="@string/Mamat"
                     android:textSize="15sp"
                     android:textColor="@color/grey_text_dark" />
 
@@ -108,7 +99,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nomor HP         :"
+                    android:text="@string/nomer"
                     android:textSize="15sp"
                     android:textColor="@color/grey_text_dark" />
 
@@ -132,7 +123,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Cabang      :"
+                    android:text="@string/cabang"
                     android:textSize="15sp"
                     android:textColor="@color/grey_text_dark" />
 
@@ -159,8 +150,8 @@
                     android:layout_height="56dp"
                     android:layout_marginEnd="8dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/green_status"
-                    android:text="Hubungi"
+                    android:backgroundTint="@color/blue_status"
+                    android:text="@string/hubungi"
                     android:textColor="@android:color/white"
                     card_view:cornerRadius="10dp"
                     android:textSize="14sp" />
@@ -170,7 +161,7 @@
                     android:layout_width="0dp"
                     android:layout_height="56dp"
                     android:layout_weight="1"
-                    android:text="Lihat"
+                    android:text="@string/lihat"
                     android:backgroundTint="@color/blue_status"
                     android:textColor="@android:color/white"
                     card_view:cornerRadius="10dp"

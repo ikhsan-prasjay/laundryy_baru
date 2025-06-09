@@ -1,162 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tambah_pegawai"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Tambah_PegawaiActivity2">
+    tools:context=".Tambah_PegawaiActivity2"> <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp">
 
     <TextView
         android:id="@+id/tv_title_pegawai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="@string/TAMBAH_PEGAWAI"
-        android:textSize="28sp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/TAMBAH_PEGAWAI" android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="@color/grey_medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center_horizontal" />
 
     <TextView
         android:id="@+id/tv_nama_pegawai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="8dp"
         android:text="@string/namalengkap"
         android:textSize="16sp"
-        android:textColor="@color/grey_text_dark"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_title_pegawai" />
+        android:textColor="@color/grey_text_dark" />
 
     <EditText
         android:id="@+id/et_nama_pegawai"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
         android:background="@drawable/rounded_edittext"
         android:hint="Nama Lengkap Pegawai"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:textColor="@color/grey_text_dark"
         android:textColorHint="@color/grey_medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_nama_pegawai"
         android:inputType="textCapWords" />
 
     <TextView
         android:id="@+id/tv_alamat_pegawai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:textSize="16sp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
-        android:text="@string/Mamat"
-        android:textColor="@color/grey_text_dark"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_nama_pegawai" />
+        android:text="@string/Mamat" android:textColor="@color/grey_text_dark"
+        android:textSize="16sp" />
 
     <EditText
         android:id="@+id/et_alamat_pegawai"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
         android:textColor="@color/grey_text_dark"
         android:background="@drawable/rounded_edittext"
         android:hint="Alamat Lengkap Pegawai"
         android:textColorHint="@color/grey_medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_alamat_pegawai"
         android:inputType="textMultiLine" />
 
     <TextView
         android:id="@+id/tv_no_hp_pegawai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:textSize="16sp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
-        android:text="@string/nomer"
-        android:textColor="@color/grey_text_dark"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_alamat_pegawai" />
+        android:text="@string/nomer" android:textColor="@color/grey_text_dark"
+        android:textSize="16sp" />
 
     <EditText
         android:id="@+id/et_no_hp_pegawai"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:inputType="phone"
         android:textColor="@color/grey_text_dark"
         android:background="@drawable/rounded_edittext"
         android:hint="Nomor HP Pegawai"
-        android:textColorHint="@color/grey_medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_no_hp_pegawai" />
+        android:textColorHint="@color/grey_medium" />
 
     <TextView
         android:id="@+id/tvCabangPegawai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:textSize="16sp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:text="@string/cabang"
         android:textColor="@color/grey_text_dark"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_no_hp_pegawai" />
+        android:textSize="16sp" />
 
     <EditText
         android:id="@+id/et_Cabang_pegawai"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:textColor="@color/grey_text_dark"
         android:background="@drawable/rounded_edittext"
         android:hint="Cabang Pegawai"
         android:textColorHint="@color/grey_medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvCabangPegawai"
         android:inputType="textCapWords" />
 
     <Button
         android:id="@+id/btn_simpan_pegawai"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="24dp"
-        android:text="@string/button_simpan"
-        android:textColor="@android:color/white"
+        android:text="@string/button_simpan" android:textColor="@android:color/white"
         android:backgroundTint="@color/blue_status"
         app:cornerRadius="12dp"
         android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_Cabang_pegawai"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textStyle="bold" />
+</LinearLayout>
+</ScrollView>

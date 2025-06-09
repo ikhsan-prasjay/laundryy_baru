@@ -29,7 +29,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ID Cabang        :"
+                android:text="@string/ID_Cabang"
                 android:textSize="16sp"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
@@ -38,7 +38,7 @@
                 android:id="@+id/tvCARD_CABANG_ID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="C001"
+                tools:text="-"
                 android:textSize="16sp"
                 android:textColor="@color/white"
                 android:textStyle="bold"
@@ -60,7 +60,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nama Cabang :"
+                    android:text="@string/Nama_Cabang"
                     android:textSize="15sp"
                     android:textColor="@color/grey_text_dark" />
 
@@ -84,7 +84,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Alamat               :"
+                    android:text="@string/Mamat"
                     android:textSize="15sp"
                     android:textColor="@color/grey_text_dark" />
 
@@ -108,7 +108,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nomor HP         :"
+                    android:text="@string/nomer"
                     android:textSize="15sp"
                     android:textColor="@color/grey_text_dark" />
 

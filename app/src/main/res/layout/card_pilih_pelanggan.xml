@@ -25,7 +25,7 @@
             android:gravity="center_vertical"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
-            tools:text="ID Pelanggan: P001"
+            tools:text="@string/Id_Pelanggan"
             android:textColor="@color/grey_text_dark"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -40,7 +40,7 @@
                 android:id="@+id/tvCARD_Pilih_PELANGGAN_nama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="Nama Pelanggan: John Doe"
+                tools:text="@string/NAMA_Pelanggan"
                 android:textColor="@color/grey_text_dark"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -50,7 +50,7 @@
                 android:id="@+id/tvCARD_PIlih_PELANGGAN_alamat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="Alamat: Jl. Contoh No. 123"
+                tools:text="@string/Mamat"
                 android:textColor="@color/grey_text_dark"
                 android:textSize="14sp"
                 android:layout_marginBottom="4dp"/>
@@ -59,7 +59,7 @@
                 android:id="@+id/tvCARD_Pilih_PELANGGAN_nohp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="No HP: 08123456789"
+                tools:text="@string/nomer"
                 android:textColor="@color/grey_text_dark"
                 android:textSize="14sp"
                 android:layout_marginBottom="2dp"/>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.ega.laundry.tambahan.TambahTambahanActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/tvtambahanjudul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tambahtambahan"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/grey_medium"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/tvtambahannama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/namatambahan"
+            android:textSize="16sp"
+            android:textColor="@color/grey_text_dark" />
+
+        <EditText
+            android:id="@+id/ettambahannama"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="@string/etnamatambahan"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/grey_text_dark"
+            android:textColorHint="@color/grey_medium"
+            android:inputType="textCapWords" />
+
+        <TextView
+            android:id="@+id/tvtambahanharga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/harga"
+            android:textSize="16sp"
+            android:textColor="@color/grey_text_dark" />
+
+        <EditText
+            android:id="@+id/ettambahanharga"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="@string/etharga"
+            android:maxLength="14"
+            android:inputType="numberDecimal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/grey_text_dark"
+            android:textColorHint="@color/grey_medium" />
+
+        <TextView
+            android:id="@+id/tvtambahancabang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/card_cabang"
+            android:textSize="16sp"
+            android:textColor="@color/grey_text_dark" />
+
+        <EditText
+            android:id="@+id/ettambahancabang"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="@string/namaCabang"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/grey_text_dark"
+            android:textColorHint="@color/grey_medium"
+            android:inputType="textCapWords" />
+
+        <Button
+            android:id="@+id/bttambahansimpan"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/button_simpan"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/blue_status"
+            app:cornerRadius="12dp"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -93,7 +93,7 @@
         android:id="@+id/Moto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jangan Mengecewakan Pelanggan"
+        android:text="@string/Jangan_Mengecewakan_Pelanggan"
         android:textSize="15sp"
         android:textColor="@color/blue_status"
         android:gravity="center"
@@ -275,7 +275,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Akun"
+                            android:text="@string/akun"
                             android:textColor="@color/blue_status"
                             android:textSize="14sp"
                             android:layout_marginTop="4dp" />
@@ -308,7 +308,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Layanan"
+                            android:text="@string/layanan"
                             android:textColor="@color/blue_status"
                             android:textSize="14sp"
                             android:layout_marginTop="4dp" />
@@ -342,7 +342,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Tambahan"
+                            android:text="@string/tambahan"
                             android:textColor="@color/blue_status"
                             android:textSize="12sp"
                             android:layout_marginTop="4dp" />
@@ -383,7 +383,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Pegawai"
+                            android:text="@string/pegawai"
                             android:textColor="@color/blue_status"
                             android:textSize="14sp"
                             android:layout_marginTop="4dp" />
@@ -416,7 +416,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Cabang"
+                            android:text="@string/cabang"
                             android:textColor="@color/blue_status"
                             android:textSize="14sp"
                             android:layout_marginTop="4dp" />
@@ -449,7 +449,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Printer"
+                            android:text="@string/printer"
                             android:textColor="@color/blue_status"
                             android:textSize="14sp"
                             android:layout_marginTop="4dp" />
