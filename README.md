@@ -1,4 +1,4 @@
-# ![image](https://github.com/user-attachments/assets/0da04baa-f601-4782-8028-41a789dd9798)Aplikasi Laundry
+# Aplikasi Laundry
 
 Aplikasi yang digunakan untuk mempermuddah pengguna menggunakan jasa laundry
 
