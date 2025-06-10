@@ -15,7 +15,8 @@ Aplikasi yang digunakan untuk mempermuddah pengguna menggunakan jasa laundry
 # Tampilan dari Laundry App
 
 <p align="center">
-  <img src="![login](https://github.com/user-attachments/assets/4a647f23-49b7-4367-906e-194bb6cb75c3)
+  <img src="![login](https://![login](https://github.com/user-attachments/assets/c869988a-4985-4b81-8ddf-f7768dd4b330)
+github.com/user-attachments/assets/4a647f23-49b7-4367-906e-194bb6cb75c3)
 " alt="Home" width="200"/>
   <img src="![daftar_regristrasi](https://github.com/user-attachments/assets/19adc823-5ad4-4687-a868-e4086adeea0c)
 " alt="Login" width="200"/>
