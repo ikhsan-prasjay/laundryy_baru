@@ -12,13 +12,17 @@ Aplikasi yang digunakan untuk mempermuddah pengguna menggunakan jasa laundry
 - melihat hasil transaksi
 - login dan regrister
 
-  ## Tampilan dari Laundry app
-  | Home | Login | Register | Akun |
-  |------|-------|----------|------|
-  | Tampilan Awal(![WhatsApp Image 2025-06-10 at 08 25 17](https://github.com/user-attachments/assets/b8b48175-7045-4056-b816-23fd1d39b794))
-  | Login(![WhatsApp Image 2025-06-10 at 08 25 17 (1)](https://github.com/user-attachments/assets/6bab83de-ee4a-4ccd-8605-cf90ca2aa738))
-  | Register(![WhatsApp Image 2025-06-10 at 08 25 17 (1)](https://github.com/user-attachments/assets/6aae0e08-735c-492a-a6da-b87c4b028da6))
-  | Akun(![WhatsApp Image 2025-06-10 at 08 25 17 (3)](https://github.com/user-attachments/assets/c427aff1-c072-402e-8bce-4a140fd2522e))
-  
-  
+# Tampilan dari Laundry App
+
+<p align="center">
+  <img src="![login](https://github.com/user-attachments/assets/4a647f23-49b7-4367-906e-194bb6cb75c3)
+" alt="Home" width="200"/>
+  <img src="![daftar_regristrasi](https://github.com/user-attachments/assets/19adc823-5ad4-4687-a868-e4086adeea0c)
+" alt="Login" width="200"/>
+  <img src="![Tambah_pegawai](https://github.com/user-attachments/assets/fe2174e3-e2b0-411c-8d83-713e0522acbb)
+" alt="Register" width="200"/>
+  <img src=![Detail_pegawai](https://github.com/user-attachments/assets/37285c33-36dd-4ab1-87f4-418c81cb47ae)
+" alt="Akun" width="200"/>
+</p>
+
 
